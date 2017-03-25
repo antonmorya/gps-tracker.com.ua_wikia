@@ -1,0 +1,1866 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>Wikia gps-tracker.com.ua</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--<link rel="stylesheet" href="assets/css/styles.css">-->
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header class="container-fluid header_main">
+        <div class="row">
+            <img height="100" width="100" class="img-circle center-block logo" data-original="assets/images/logo_300.png" alt="M2M Logo">
+            <h1 class="text-center">GPS-TRACKER.COM.UA</h1>
+            <h4 class="text-center">Руководство пользователя системы мониторинга</h4>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <a class="topbutton visible-xs" href="#"><i class="sprite sprite-up-arrow"></i></a>
+        <!--mobile nav-->
+        <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg" id="mobile_nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--navbar-header-->
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#section1">Регистрация</a></li>
+                        <li>
+                            <a href="#section2">Пользовательский интерфейс</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section2-1">Основные составляющие</a></li>
+                                <li><a href="#section2-2">Инструменты для работы с картой</a></li>
+                                <li><a href="#section2-3">Измерение расстояния отрезками</a></li>
+                                <li><a href="#section2-4">Ручной ввод координат от трекера</a></li>
+                                <li><a href="#section2-5">Поиск города на карте</a></li>
+                                <li><a href="#section2-6">Индикация на карте</a></li>
+                                <li><a href="#section2-7">Таблица состояния объектов</a></li>
+                                <li><a href="#section2-8">Водители</a></li>
+                                <li><a href="#section2-9">Группы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3">Редактирование личных данных</a></li>
+                        <li>
+                            <a href="#section4">Пополнение счёта, оплата услуг</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section4-1">Процедура пополнения счёта</a></li>
+                                <li><a href="#section4-2">Замена тарифа</a></li>
+                                <li><a href="#section4-3">Транзакции</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#section5">Устройства</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section5-1">Подключение трекера</a></li>
+                                <li><a href="#section5-2">Добавление нового устройства</a></li>
+                                <li><a href="#section5-3">Удаление устройства</a></li>
+                                <li><a href="#section5-4">Редактирование устройства</a></li>
+                            </ul>
+                            <!--sublist-->
+                        </li>
+                        <li>
+                            <a href="#section6">Отчёты</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section6-1">Типы отчетов</a></li>
+                                <li><a href="#section6-2">Трек (путь авто на карте)</a></li>
+                                <li><a href="#section6-3">Диагностический отчёт</a></li>
+                                <li><a href="#section6-4">Сводный отчёт</a></li>
+                                <li><a href="#section6-5">Список отчётов</a></li>
+                                <li><a href="#section6-6">Журнал</a></li>
+                                <li><a href="#section6-7">Экспорт отчетов</a></li>
+                                <li><a href="#section6-8">Графики</a></li>
+                                <li><a href="#section6-9">Расходометры</a></li>
+                                <li><a href="#section6-10">Моточасы</a></li>
+                            </ul>
+                            <!--sublist-->
+                        </li>
+                        <li><a href="#section7">Объекты</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section7-1">Добавление объекта на карту</a></li>
+                                <li><a href="#section7-2">Редактирование объектов</a></li>
+                                <li><a href="#section7-3">Импорт объектов</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section8">Зоны</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section8-1">Добавление новой зоны на карту</a></li>
+                                <li><a href="#section8-2">Редактирование информации о зоне</a></li>
+                                <li><a href="#section8-3">Работа со списком зон</a></li>
+                                <li><a href="#section8-4">Экспорт зон</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#section9">Пользовательские события</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section9-1">Создание события</a></li>
+                                <li><a href="#section9-2">Настройка уведомлений</a></li>
+                                <li><a href="#section9-3">Список команд</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#section10">Рассылка автоматических отчётов</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section10-1">Общие сведения</a></li>
+                                <li><a href="#section10-2">Создание автоматического<br/>отчета</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section11">Маршруты</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section11-1">Остановки и создание маршрута</a></li>
+                                <li><a href="#section11-2">Назначение автомобилей на маршрут</a></li>
+                                <li><a href="#section11-3">Хронометраж маршрута</a></li>
+                                <li><a href="#section11-4">Работа с графиком движения</a></li>
+                                <li><a href="#section11-5">Отчёты по маршрутам</a></li>
+                            </ul>
+                            <!--sublist-->
+                        </li>
+                    </ul>
+                </div>
+                <!--collapse navbar-collapse-->
+            </div>
+            <!--end of mobile nav-->
+        </nav>
+        <!--desktop nav-->
+        <div class="scrollspy col-sm-3 col-md-3 col-lg-3 hidden-xs desktop_nav">
+            <nav class="navbar nav " data-spy="affix" data-offset-top="204" data-offset-bottom="300">
+                <ul id="nav" class="nav">
+                    <li class="menu-item"><a href="#section1">Регистрация</a></li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section2">Пользовательский&#32;<br class="visible-sm visible-md">интерфейс</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section2-1">Основные&#32;<br class="visible-sm">составляющие</a></li>
+                            <li><a href="#section2-2">Инструменты для&#32;<br class="visible-sm visible-md">работы с картой</a></li>
+                            <li><a href="#section2-3">Измерение расстояния&#32;<br class="visible-sm visible-md">отрезками</a></li>
+                            <li><a href="#section2-4">Ручной ввод координат&#32;<br class="visible-sm visible-md">от трекера</a></li>
+                            <li><a href="#section2-5">Поиск города на карте</a></li>
+                            <li><a href="#section2-6">Индикация на карте</a></li>
+                            <li><a href="#section2-7">Таблица состояния&#32;<br class="visible-sm visible-md">объектов</a></li>
+                            <li><a href="#section2-8">Водители</a></li>
+                            <li><a href="#section2-9">Группы</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#section3">Редактирование<br/>личных данных</a></li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section4">Пополнение счёта,<br/>оплата услуг</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section4-1">Процедура&#32;<br class="visible-sm visible-md">пополнения счёта</a></li>
+                            <li><a href="#section4-2">Замена тарифа</a></li>
+                            <li><a href="#section4-3">Транзакции</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section5">Устройства</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section5-1">Подключение трекера</a></li>
+                            <li><a href="#section5-2">Добавление нового&#32;<br class="visible-sm visible-md">устройства</a></li>
+                            <li><a href="#section5-3">Удаление устройства</a></li>
+                            <li><a href="#section5-4">Редактирование&#32;<br class="visible-sm visible-md">устройства</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section6">Отчёты</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section6-1">Типы отчетов</a></li>
+                            <li><a href="#section6-2">Трек&#32;<br class="visible-sm">(путь авто на карте)</a></li>
+                            <li><a href="#section6-3">Диагностический&#32;<br class="visible-sm">отчёт</a></li>
+                            <li><a href="#section6-4">Сводный отчёт</a></li>
+                            <li><a href="#section6-5">Список отчётов</a></li>
+                            <li><a href="#section6-6">Журнал</a></li>
+                            <li><a href="#section6-7">Экспорт отчетов</a></li>
+                            <li><a href="#section6-8">Графики</a></li>
+                            <li><a href="#section6-9">Расходометры</a></li>
+                            <li><a href="#section6-10">Моточасы</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <li class="menu-item dropdown"><a href="#section7" class="dropdown-toggle">Объекты</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section7-1">Добавление объекта&#32;<br class="visible-sm visible-md">на карту</a></li>
+                            <li><a href="#section7-2">Редактирование&#32;<br class="visible-sm">объектов</a></li>
+                            <li><a href="#section7-3">Импорт объектов</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <li class="menu-item dropdown"><a href="#section8" class="dropdown-toggle">Зоны</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section8-1">Добавление зоны&#32;<br class="visible-sm visible-md">на карту</a></li>
+                            <li><a href="#section8-2">Редактирование&#32;<br class="visible-sm visible-md">информации о зоне</a></li>
+                            <li><a href="#section8-3">Работа со списком&#32;<br class="visible-sm">зон</a></li>
+                            <li><a href="#section8-4">Экспорт зон</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a href="#section9" class="dropdown-toggle">Пользовательские&#32;<br class="visible-sm">события</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section9-1">Создание события</a></li>
+                            <li><a href="#section9-2">Настройка&#32;<br class="visible-sm">уведомлений</a></li>
+                            <li><a href="#section9-3">Список команд</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section10">Рассылка&#32;<br class="visible-sm visible-md">автоматических&#32;<br class="visible-sm">отчётов</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section10-1">Общие сведения</a></li>
+                            <li><a href="#section10-2">Создание автоотчета</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown menu-item">
+                        <a class="dropdown-toggle" href="#section11">Маршруты</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section11-1">Остановки и&#32;<br class="visible-sm visible-md">создание маршрута</a></li>
+                            <li><a href="#section11-2">Назначение&#32;<br class="visible-sm">автомобилей&#32;<br class="visible-sm visible-md">на маршрут</a></li>
+                            <li><a href="#section11-3">Хронометраж&#32;<br class="visible-sm">маршрута</a></li>
+                            <li><a href="#section11-4">Работа с графиком&#32;<br class="visible-sm visible-md">движения</a></li>
+                            <li><a href="#section11-5">Отчёты&#32;<br class="visible-sm visible-md">по маршрутам</a></li>
+                        </ul>
+                        <!--sublist-->
+                    </li>
+                    <!--section11-->
+                </ul>
+                <!--main list  data-offset-top="205"-->
+            </nav>
+        </div>
+        <!-- end of desktop nav-->
+        <!--Main container-->
+        <div class="main col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <!--Begin of section1 Регистрация-->
+            <div class="content mg-indent" id="section1">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Регистрация</h1>
+                    </header>
+                    <ul>
+                        <li>Для регистрации на gps-tracker.com.ua нажмите на кнопку регистрации. <img width="879" height="313" class="img-responsive center-block bordered sm-mg-indent" data-original="" alt="Инициация процедуры регистрации нового пользователя">
+                        </li>
+                        <li class="sm-pd-indent">Откроется окно Регистрации нового пользователя. В регистрационном окне следует заполнить учетные данные и поле проверочного кода. Имя пользователя и пароль в дальнейшем будут использоваться как учётные данные для входа в систему мониторинга.
+                            <blockquote class="sm-mg-indent warning">
+                                <h3>Внимание</h3>
+                                <p>Окно проверочного кода чувствительно к регистру</p>
+                            </blockquote>
+                            <img width="470" height="669" class="img-responsive center-block sm-mg-indent" data-original="assets/images/section1/reg2.png" alt="Форма регистрации нового пользователя">
+                            <blockquote class="sm-mg-indent warning">
+                                <h3>Внимание</h3>
+                                <ul>
+                                    <li>Поле «<b>Огранизация</b>» необходимо заполнять без кавычек.</li>
+                                    <li>При регистрации желательно указывать реальный телефонный номер, по которому служба технической поддержки может связаться с владельцем аккаунта.</li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                        <li class="sm-pd-indent">Нажмите ОК. Если все заполнено верно, то у вас появиться сообщение которое оповестит вас о том что регистрация прошла успешно! <img width="800" height="294" class="img-responsive center-block bordered sm-mg-indent" data-original="assets/images/section1/reg3.png" alt="Завершение регистрации">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--end of section1 Регистрация-->
+            <!--Begin of section2 Пользовательский интерфейс-->
+            <div class="content mg-indent" id="section2">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Пользовательский интерфейс</h1>
+                    </header>
+                    <p class="sm-mg-indent">Данный раздел описывает основные элементы пользовательского интерфейса, их расположение и затрагивает базовый функционал инструментария работы с картой.</p>
+                </div>
+                <div class="inner_content" id="section2-1">
+                    <header>
+                        <h2>Основные составляющие интерфейса:</h2>
+                    </header>
+                    <ol class="sm-mg-indent">
+                        <li>Закладки управления сервисом</li>
+                        <li>Функциональные кнопки</li>
+                        <li>Панель работы с картой</li>
+                        <li>Таблица состояния объектов</li>
+                        <li>Область отображения карты</li>
+                        <li>Управление профилем</li>
+                    </ol>
+                    <img width="1356" height="671" data-original="assets/images/section2/interface1.png" class="img-responsive center-block sm-mg-indent bordered" alt="Элементы пользовательского интерфейса.">
+                </div>
+                <!--section2-1-->
+                <div class="inner_content" id="section2-2">
+                    <header>
+                        <h2>Инструменты для работы с картой</h2>
+                    </header>
+                    <p class="sm-mg-indent">Ресурс поддерживает карты и спутниковые снимки с различных on-line сервисов, таких как: Google, Ovi Map, OpenStreetMap и т.п..</p>
+                    <img width="701" height="281" data-original="assets/images/section2/interface2.png" class="img-responsive center-block bordered sm-mg-indent" alt="Выбор поставщика карт.">
+                    <p class="sm-mg-indent">Настройки отображения карты выполняются c панели управления в верхней части дисплея. Рядом расположены кнопки основных инструментов сервиса управляющих ГЕО зонами, местами и объектами пользователя, экранной линейкой, поиском и т.п..</p>
+                    <img width="651" height="92" data-original="assets/images/section2/interface3.png" class="img-responsive center-block sm-mg-indent" alt="Панель управления картой.">
+                    <ol class="sm-mg-indent">
+                        <li><i class="sprite sprite-zoompan"></i> Режим обзора карты (включён по-умолчанию)</li>
+                        <li><i class="sprite sprite-addzone"></i> Добавить зону на карту</li>
+                        <li><i class="sprite sprite-addobject"></i> Добавить объект на карту</li>
+                        <li><i class="sprite sprite-ruler"></i> Измерение расстояния отрезками</li>
+                        <li><i class="sprite sprite-marker-button"></i> Ручной ввод координат из SMS</li>
+                        <li><i class="sprite sprite-find"></i> Поиск адреса на карте</li>
+                        <li><i class="sprite sprite-cmddevice"></i> Управление устройствами</li>
+                        <li><i class="sprite sprite-trigger"></i> Выбор типа карты</li>
+                        <li><i class="sprite sprite-checkbox"></i> Отображение пробок (только Google Maps)</li>
+                    </ol>
+                </div>
+                <!--section2-2-->
+                <div class="inner_content" id="section2-3">
+                    <header>
+                        <h2>Измерение расстояния отрезками <i class="sprite sprite-ruler"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы воспользоваться сервисом измерения расстояния, необходимо нажать на кнопку «<b>Измерение расстояния отрезками</b>» в панели инструментов.</p>
+                    <img width="228" height="35" data-original="assets/images/section2/interface4.png" class="img-responsive center-block sm-mg-indent" alt="Инструмент измерения расстояния отрезками на карте.">
+                    <p class="sm-mg-indent">Далее необходимо перевести курсор в область отображения карты и нажатиями левой кнопки мыши отметить точки.</p>
+                    <img width="336" height="465" data-original="assets/images/section2/interface5.png" class="img-responsive center-block bordered sm-mg-indent" alt="Вид результата работы инструмента измерения расстояния отрезками.">
+                    <p class="sm-mg-indent">Красным кружком с треугольником обозначается начальная точка, красным кружком с квадратом - конечная, красным кружком поменьше - промежуточные точки.</p>
+                    <p>Для того, чтобы узнать расстояние от начальной точки до любой из промежуточных или до конечной необходимо навести курсор на интересующую клиента точку. По наведению курсора появится информация с индексом выбранной точки и расстоянием от начальной точки к выбранной.</p>
+                </div>
+                <!--section2-3-->
+                <div class="inner_content" id="section2-4">
+                    <header>
+                        <h2 class="sm-lpd-indent">Ручной ввод координат от трекера <i class="sprite sprite-marker-button"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы ввести координаты вручную, необходимо нажать на кнопку «<b>Ручной ввод координат от трекера</b>» в панели инструментов.</p>
+                    <img width="226" height="35" data-original="assets/images/section2/interface6.png" class="img-responsive center-block sm-mg-indent" alt="Кнопка активации инструмента ручного ввода координат.">
+                    <p class="sm-mg-indent">Откроется окно «<b>Ручной ввод координат</b>».</p>
+                    <img width="262" height="142" data-original="assets/images/section2/interface7.png" class="img-responsive center-block sm-mg-indent" alt="Инструмент ручного ввода координат.">
+                    <ol class="sm-mg-indent">
+                        <li>Выбор типа координат: градусы, NMEA формат.</li>
+                        <li>Широта</li>
+                        <li>Долгота</li>
+                    </ol>
+                </div>
+                <!--section2-4-->
+                <div class="inner_content" id="section2-5">
+                    <header>
+                        <h2>Поиск города на карте <i class="sprite sprite-find"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы найти город на карте, необходимо нажать на кнопку «<b>Поиск города на карте</b>» в панели инструментов.</p>
+                    <img width="378" height="45" data-original="assets/images/section2/interface8.png" class="img-responsive center-block sm-mg-indent" alt="Кнопка активации инструмента поиска города.">
+                    <p class="sm-mg-indent">В появившейся строке следует ввести название интересующий город и нажать на клавишу «<b>Enter</b>».</p>
+                    <p>Карта сместится к указанной точке в поле местности.</p>
+                </div>
+                <!--section2-5-->
+                <div class="inner_content" id="section2-6">
+                    <header>
+                        <h2>Индикация на карте</h2>
+                    </header>
+                    <ul class="sm-mg-indent">
+                        <li><i class="map_icon map_icon-map_icon3"></i> Стрелка, острый конец которой показывает направление движения - автомобиль едет.</li>
+                        <li><i class="map_icon map_icon-map_icon2"></i> Красный кружок - автомобиль стоит.</li>
+                        <li><i class="map_icon map_icon-map_icon1"></i> Желтый квадрат - нет GPRS связи c устройством.</li>
+                        <li><i class="map_icon map_icon-map_icon5"></i> Синий квадрат - нет GPS связи c устройством.</li>
+                        <li><i class="map_icon map_icon-map_icon4"></i> Звёздочка - отображается в момент, когда устройство присылает собственное местоположение, найденное исключительно по базовым станциям мобильного оператора.</li>
+                    </ul>
+                </div>
+                <!--section2-6-->
+                <div class="inner_content" id="section2-7">
+                    <header>
+                        <h2>Таблица состояния объектов</h2>
+                    </header>
+                    <p class="sm-mg-indent">Состояние объектов, отражаемое <a href="#section2-6">индикаторами</a>, так же дублируется в информационной панели вкладки «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>).</p>
+                    <img width="380" height="445" data-original="assets/images/section2/interface9.png" class="img-responsive center-block sm-mg-indent bordered" alt="Вид панели информации об автомобилях">
+                    <p class="sm-mg-indent">Графа «<b>Состояние</b>» может принимать следующие значения:</p>
+                    <ul class="sm-mg-indent">
+                        <li><span class="stands">Стоит: *м</span></li>
+                        <li><span class="going-normal">Едет *км/ч</span>(или <span class="going-high-speed">Едет</span> в случае превышения скорости)</li>
+                        <li><span class="no-data">Нет данных: *м</span></li>
+                        <li><span class="no-data">Нет GPRS: *м</span></li>
+                        <li><span class="no-data">Нет GPS: *м</span></li>
+                    </ul>
+                </div>
+                <!--section2-7-->
+                <div class="inner_content" id="section2-8">
+                    <header>
+                        <h2>Водители <i class="sprite sprite-drivers"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для доступа к форме управления водителями необходимо нажать на кнопку «<b>Водители</b>» (<i class="sprite sprite-drivers"></i>) в панели управления вкладки «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) во вкладках управления сервисом.</p>
+                    <img width="456" height="254" data-original="assets/images/section2/interface10.png" class="img-responsive center-block sm-mg-indent bordered" alt="Вид меню активации инструмента управления влдителями">
+                    <p class="sm-mg-indent">Главное окно формы управления водителями называется <b>«Справочник «Водители»</b> и выводит на экран список всех водителей пользователя.</p>
+                    <img width="799" height="500" data-original="assets/images/section2/interface11.png" class="img-responsive center-block sm-mg-indent bordered" alt="Инструмент управления водителями">
+                    <h3 class="mg-indent">Кнопка «Новый»</h3>
+                    <p class="sm-mg-indent">После нажатия на эту кнопку откроется форма редактирования информации о водителе.</p>
+                    <img width="744" height="570" data-original="assets/images/section2/interface12.png" class="img-responsive center-block sm-mg-indent bordered" alt="Инструмент добавления водителей">
+                    <ol class="sm-mg-indent">
+                        <li>Поле ввода фамилии водителя.</li>
+                        <li>Поле ввода имени водителя.</li>
+                        <li>Поле ввода отчества водителя.</li>
+                        <li>Поле ввода информации об адресе проживания водителя.</li>
+                        <li>Поле ввода номера и серии паспорта водителя.</li>
+                        <li>Поле ввода идентификационного кода водителя.</li>
+                        <li>Поле ввода номера водительского удостоверения.</li>
+                        <li>Поле ввода характеристики водителя.</li>
+                        <li>Список телефонных номеров водителя.</li>
+                        <li>Кнопка вызова формы ввода нового телефонного номера.</li>
+                        <li>Кнопка вызова формы редактирования телефонного номера. Необходимо выбрать телефонный номер из списка номеров и нажать на кнопку «<b>Править</b>».</li>
+                        <li>Кнопка удаления телефонного номера. Необходимо выбрать телефонный номер из списка номеров и нажать на кнопку «<b>Удалить</b>».</li>
+                        <li>Поле отображения фотографии водителя.</li>
+                        <li>Кнопка вызова формы добавления фотографии водителя из файла.</li>
+                        <li>Кнопка удаления фотографии водителя.</li>
+                        <li>Список автомобилей пользователя для привязки к этому водителю.</li>
+                    </ol>
+                    <h3 class="mg-indent">Кнопка «<b>Редактировать</b>»</h3>
+                    <p class="sm-mg-indent">Выберите из списка водителя, информацию о котором необходимо отредактировать и нажмите на эту кнопку. Откроется форма редактирования информации о водителе с полями, заполненными введенными ранее данными.</p>
+                    <img width="743" height="570" data-original="assets/images/section2/interface13.png" class="img-responsive center-block sm-mg-indent bordered" alt="Инструмент добавления водителей">
+                    <p class="sm-mg-indent">Внесите изменения в поля с данными, которые необходимо отредактировать и нажмите на кнопку «<b>Сохранить</b>».</p>
+                    <h3 class="mg-indent">Кнопка «<b>Удалить</b>»</h3>
+                    <p class="sm-mg-indent">Выберите из списка водителя, запись о котором необходимо удалить и нажмите на эту кнопку.</p>
+                    <h3 class="mg-indent">Кнопка «<b>Привязать</b>»</h3>
+                    <p class="sm-mg-indent">Выберите из списка водителя и нажмите на эту кнопку. Откроется окно привязки автомобиля к выбранному водителю.</p>
+                    <img width="513" height="112" data-original="assets/images/section2/interface14.png" class="img-responsive center-block sm-mg-indent bordered" alt="Выбор автомобиля, назначаемого водителю">
+                    <p class="sm-mg-indent">Выберите из выпадающего списка нужный автомобиль и нажмите на кнопку «<b>Сохранить</b>».</p>
+                    <h3 class="mg-indent">Кнопка «<b>Отвязать</b>»</h3>
+                    <p class="sm-mg-indent">Для того, чтобы отвязать автомобиль от определенного водителя необходимо выбрать водителя из списка и нажать на эту кнопку.</p>
+                </div>
+                <!--section2-8-->
+                <div class="inner_content" id="section2-9">
+                    <header>
+                        <h2>Группы</h2>
+                    </header>
+                    <p class="sm-mg-indent">Сервис предоставляет возможность объединять доступные устройства в группы в независимости от типов устройств и их настроек.</p>
+                    <p class="sm-mg-indent">Для того, чтобы группировать устройства необходимо включить режим показа групп. Для этого необходимо нажать правой кнопкой мыши на списке устройств во вкладке «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) во вкладках управления сервисом и выбрать пункт контекстного меню «<b>Вкл./Выкл. режим показа групп</b>».</p>
+                    <img width="381" height="251" data-original="assets/images/section2/interface15.png" class="img-responsive center-block sm-mg-indent bordered" alt="Включение/Выключение режима показа групп">
+                    <p class="sm-mg-indent">Если режим показа групп выключен, список устройств будет отображен в другом виде.</p>
+                    <img width="381" height="418" data-original="assets/images/section2/interface16.png" class="img-responsive center-block sm-mg-indent bordered" alt="Список авто без показа групп">
+                    <ol>
+                        <li>Кнопка сворачивания/разворачивания группы.</li>
+                        <li>Название группы.</li>
+                        <li>Ссылка на получение группового отчета.</li>
+                    </ol>
+                    <h3 class="mg-indent">Создание группы</h3>
+                    <p class="sm-mg-indent">Для того, чтобы создать группу, необходимо нажать правой кнопкой мыши на списке устройств, затем выбрать пункт контекстного меню «<b>Редактировать группы</b>».</p>
+                    <img width="380" height="199" data-original="assets/images/section2/interface17.png" class="img-responsive center-block sm-mg-indent bordered" alt="Меню редактирования групп">
+                    <p class="sm-mg-indent">В открывшемся окне «<b>Группы</b>» следует ввести в поле ввода имя новой группы и нажать на кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>). Например, создадим группу под названием «<b>test</b>»</p>
+                    <p class="sm-mg-indent">Группа не будет видна, пока в нее не добавят хотя бы одно устройство.</p>
+                    <h3 class="mg-indent">Добавление устройств в группу</h3>
+                    <p class="sm-mg-indent">Необходимо нажать правой кнопкой мыши на устройстве из списка устройств и выбрать пункт контекстного меню «<b>Добавить в группу</b>».</p>
+                    <img width="312" height="258" data-original="assets/images/section2/interface18.png" class="img-responsive center-block sm-mg-indent bordered" alt="Добавление группы">
+                    <p class="sm-mg-indent">В открывшемся окне «<b>Группы</b>» нужно выбрать группу, в которую необходимо добавить устройство и нажать на кнопку «<b>ОК</b>». После этого список устройств выведется с группами.</p>
+                    <img width="381" height="397" data-original="assets/images/section2/interface19.png" class="img-responsive center-block sm-mg-indent bordered" alt="Добавление устройства в группу">
+                    <h3 class="mg-indent">Групповой отчет</h3>
+                    <p class="sm-mg-indent">Для получения группового отчета по устройствам определенной группы необходимо нажать на ссылку «<b>Групповой отчет</b>» или «<b>Групповой отчет2</b>».</p>
+                    <img width="400" height="332" data-original="assets/images/section2/interface20.png" class="img-responsive center-block sm-mg-indent bordered" alt="Кнопки создания группового отчёта">
+                    <p class="sm-mg-indent">Откроется окно создание выбранного группового отчёта:</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-md-6 col-sm-6">
+                            <figcaption>«<b>Групповой отчет</b>»</figcaption>
+                            <img width="415" height="250" data-original="assets/images/section2/interface21.png" class="img-responsive center-block bordered" alt="Вид способа удаления устройства через пользовательский интерфейс">
+                        </figure>
+                        <div class="clearfix visible-xs"></div>
+                        <figure class="col-md-6 col-sm-6">
+                            <figcaption>«<b>Групповой отчет2</b>»</figcaption>
+                            <img width="390" height="158" data-original="assets/images/section2/interface22.png" class="img-responsive center-block bordered" alt="Удаление устройства через контекстное меню">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Настройка данных отчётов перед формированием происходит аналогично <a href="#section6-4">сводным отчётам</a>.</p>
+                </div>
+                <!--section2-9-->
+            </div>
+            <!--end of section2 Пользовательский интерфейс-->
+            <!--Begin of section3 Редактирование личных данных-->
+            <div class="content mg-indent" id="section3">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Редактирование личных данных <i class="sprite sprite-profile"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Редактирование личных данных совершается в отдельной форме. Форма открывается при нажатии вкладки «<b>Профиль</b>» (<i class="sprite sprite-profile"></i>), она расположена в правом верхнем углу</p>
+                    <img width="481" height="151" data-original="assets/images/section3/profile1.png" class="img-responsive center-block bordered sm-mg-indent" alt="Кнопка перехода к информации о профиле.">
+                    <p class="sm-mg-indent">Во вкладке «<b>Профиль</b>» (<i class="sprite sprite-profile"></i>), можно сменить личные данные, такие как: имя, фамилия, организация, контактный телефон. Так же можно изменить пароль учетной записи. Логин и электронную почту меняются только по запросу в службу поддержки.</p>
+                    <img width="414" height="571" data-original="assets/images/section3/profile2.png" class="img-responsive center-block sm-mg-indent" alt="Вид окна информации профиля. Вкладка Профиль.">
+                    <p class="sm-mg-indent">Во вкладке «<b>Настройки</b>» возможно сменить часовой пояс, для корректного вывода данных о устройствах и сменить язык интерфейса.</p>
+                    <div class="row sm-mg-indent">
+                        <div class="col-lg-4">
+                            <img width="411" height="595" data-original="assets/images/section3/profile3.png" class="img-responsive center-block" alt="Вид окна информации профиля. Вкладка Настройки.">
+                        </div>
+                        <div class="clearfix visible-md visible-sm visible-xs"></div>
+                        <div class="col-lg-4">
+                            <img width="413" height="596" data-original="assets/images/section3/profile4.png" class="img-responsive center-block" alt="Вид окна информации профиля. Вкладка Настройки.">
+                        </div>
+                        <div class="clearfix visible-md visible-sm visible-xs"></div>
+                        <div class="col-lg-4">
+                            <img width="412" height="596" data-original="assets/images/section3/profile5.png" class="img-responsive center-block" alt="Вид окна информации профиля. Вкладка Настройки.">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of section3 Редактирование личных данных-->
+            <!--Begin of section4 Пополнение счёта, оплата услуг-->
+            <div class="content mg-indent" id="section4">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Пополнение счёта, оплата услуг <i class="sprite sprite-billing"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Сервисом GPS монитринга gps-tracker.com.ua можно пользоваться на платной и бесплатной основе. Условия тарифных планов и их виды можно найти на <a href="http://gps-tracker.com.ua/tariffication.php">странице их описания</a>. В данной части пользовательского руководства идёт речь о манипуляции тарифными планами и балансом средств аккаунта.</p>
+                </div>
+                <div class="inner_content" id="section4-1">
+                    <header>
+                        <h2>Процедура пополнения счёта</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы перейти к оплате услуг необходимо нажать на вкладку «<b>Счет</b>» (<i class="sprite sprite-billing"></i>) в панели инструментов справа.</p>
+                    <img width="279" height="38" data-original="assets/images/section4/bill1.png" class="img-responsive center-block sm-mg-indent" alt="Кнопка перехода к окну состояния счёта пользователя.">
+                    <p class="sm-mg-indent">В открывшемся окне во вкладке «<b>Счет</b>» (<i class="sprite sprite-billing"></i>) необходимо ввести желаемое значение суммы в поле, выбрать валюту из выпадающего списка и нажать на кнопку удобного сервиса системы оплаты.</p>
+                    <div class="row sm-mg-indent">
+                        <img width="639" height="391" data-original="assets/images/section4/bill2.png" class="img-responsive center-block col-lg-6" alt="Вид окна состояния счёта пользователя. Вкладка Счёт.">
+                        <div class="clearfix visible-xs-block visible-sm-block visible-md-block"></div>
+                        <img width="639" height="390" data-original="assets/images/section4/bill3.png" class="img-responsive center-block col-lg-6" alt="Вид окна состояния счёта пользователя. Вкладка Счёт.">
+                    </div>
+                    <p class="sm-mg-indent">После выбора системы оплаты, Вас автоматически переадресует на страницу соответствующего сервиса.</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-lg-4 col-md-4">
+                            <figcaption><b>WebMoney</b></figcaption>
+                            <img width="560" height="634" data-original="assets/images/section4/bill4.png" class="img-responsive center-block bordered" alt="Переход к идентификации пользователя в сервисе WebMoney.">
+                        </figure>
+                        <figure class="col-lg-4 col-md-4">
+                            <figcaption><b>LiqPay</b></figcaption>
+                            <img width="594" height="541" data-original="assets/images/section4/bill5.png" class="img-responsive center-block bordered" alt="Переход к идентификации пользователя в сервисе LiqPay.">
+                        </figure>
+                        <figure class="col-lg-4 col-md-4">
+                            <figcaption><b>Приват 24</b></figcaption>
+                            <img width="364" height="633" data-original="assets/images/section4/bill6.png" class="img-responsive center-block bordered" alt="Переход к идентификации пользователя в сервисе Приват 24.">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">После оплаты сервис автоматически перенаправит Вас на страницу сервиса.</p>
+                </div>
+                <!--section4-1-->
+                <div class="inner_content" id="section4-2">
+                    <header>
+                        <h2>Замена тарифа</h2>
+                    </header>
+                    <p class="sm-mg-indent">Во вкладке тарифы можно просмотреть тариф использующийся в данный момент, а также можно подать заявку на изменение тарифного плана. О самих же тарифах Вы можете узнать на нашем сайте на <a href="http://gps-tracker.com.ua/tariffication.php">специальной странице</a>.</p>
+                    <img width="639" height="393" data-original="assets/images/section4/bill7.png" class="img-responsive center-block sm-mg-indent" alt="Вид окна состояния счёта пользователя. Вкладка Тарифы.">
+                </div>
+                <!--section4-2-->
+                <div class="inner_content" id="section4-3">
+                    <header>
+                        <h2>Транзакции</h2>
+                    </header>
+                    <p class="sm-mg-indent">Во вкладке транзакции есть возможность проследить движение средств с одной учетной записи на другую. Это может быть оплата каких-либо услуг или списание средств за рассылку смс.</p>
+                    <p>Для того что бы просмотреть транзакции за период, необходимо заполнить соответствующие поля - "Период от" и "Период до". Так же есть возможность воспользоваться фильтром по типу операции (например «<b>Отправка смс</b>» или «<b>Оплата на карту</b>») и по количеству выводимой информации (поле "Лимит"). Фильтр будет работать если нажать на кнопку «<b>Ок</b>».</p>
+                </div>
+                <!--section4-3-->
+            </div>
+            <!--end of section4 Пополнение счёта, оплата услуг-->
+            <!--Begin of section5 Устройства-->
+            <div class="content mg-indent" id="section5">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Устройства</h1>
+                    </header>
+                    <p>Данный раздел описывает возможности сервиса, касающиеся управления количесвом устройств и обработки данных, приходящих от устройств.</p>
+                </div>
+                <div class="inner_content" id="section5-1">
+                    <header>
+                        <h2>Подключение трекера </h2>
+                    </header>
+                    <p class="sm-mg-indent">Для подключения устройства к системе необходимо:</p>
+                    <ul>
+                        <li>знать IMEI устройства</li>
+                        <li>знать телефонный номер sim-карты, которую установили в устройство</li>
+                        <li>если на sim-карте установлен pin-код, то его нужно снять. Подключение устройства осуществляется на сайте <a href="http://gps-tracker.com.ua">gps-tracker.com.ua</a>. в заведенной заранее учетной записи. </li>
+                    </ul>
+                </div>
+                <!--section5-1-->
+                <div class="inner_content" id="section5-2">
+                    <header>
+                        <h2>Добавление нового устройства <i class="sprite sprite-add"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Перейдите во вкладку «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) на панели управления сервисом.</p>
+                    <p>Нажмите на кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>) слева на панели управления вкладки «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>).</p>
+                    <img width="591" height="148" data-original="assets/images/section5/dev1.png" class="img-responsive center-block bordered sm-mg-indent" alt="Вид кнопки добавления устройства на аккаунт">
+                    <p class="sm-mg-indent">В открывшемся окне «<b>Добавление устройства</b>» необходимо внести данные устройства.</p>
+                    <img width="201" height="315" data-original="assets/images/section5/dev2.png" class="img-responsive center-block sm-mg-indent" alt="Вид окна добавления устройства">
+                    <p class="sm-mg-indent">Выберите тип устройства, обычно название или модель устройства. Идентификатор устройства IMEI, 15 цифр (например 869309010710807).</p>
+                    <p><b>Длину идентификатора для Вашего устройства можно найти в <a href="http://gps-tracker.com.ua/connection.php">таблице поддерживаемых устройств</a>.</b></p>
+                    <p>Телефонный номер sim-карты в любом формате (например +380676744588 или 0676744588 ).</p>
+                    <p>Для подтверждения введите проверочный код с картинки и нажмите кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>)</p>
+                    <div class="row sm-mg-indent">
+                        <div class="col-lg-offset-3 col-lg-3 col-md-offset-2 col-md-4 col-sm-offset-0 col-sm-6">
+                            <img width="201" height="317" data-original="assets/images/section5/dev3.png" class="img-responsive center-block" alt="Вид выпадающего меню выбора типа устройства">
+                        </div>
+                        <div class="clearfix visible-xs"></div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <img width="200" height="317" data-original="assets/images/section5/dev4.png" class="img-responsive center-block" alt="Вид окна добавления устройства">
+                        </div>
+                    </div>
+                    <p class="sm-mg-indent">Если все сделано правильно, появится сообщение, оповещающее об успешном добавлении устройства.</p>
+                    <img width="219" height="103" data-original="assets/images/section5/dev5.png" class="img-responsive center-block sm-mg-indent" alt="Вид всплывающего сообщения об успешном добавлении устройства">
+                </div>
+                <!--section5-2-->
+                <div class="inner_content" id="section5-3">
+                    <header>
+                        <h2>Удаление устройства <i class="sprite sprite-delete"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Выберите устройство из списка и нажмите на кнопку «<b>Удалить</b>» (<i class="sprite sprite-delete"></i>) в выпадающем меню «<b>Устройство</b>», или нажмите «<b>правой кнопкой мыши</b>» на устройство, которое хотите удалить, после чего, в выпадающем меню нажмите кнопку «<b>Удалить</b>» (<i class="sprite sprite-delete"></i>)</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-lg-offset-2 col-lg-4 col-md-6 col-sm-6">
+                            <figcaption><b>Через интерфейс:</b></figcaption>
+                            <img width="380" height="404" data-original="assets/images/section5/dev6.png" class="img-responsive center-block bordered" alt="Вид способа удаления устройства через пользовательский интерфейс">
+                        </figure>
+                        <div class="clearfix visible-xs"></div>
+                        <figure class="col-lg-4 col-md-6 col-sm-6">
+                            <figcaption><b>Через контекстное меню:</b></figcaption>
+                            <img width="380" height="405" data-original="assets/images/section5/dev7.png" class="img-responsive center-block bordered" alt="Удаление устройства через контекстное меню"></figure>
+                    </div>
+                    <p class="sm-mg-indent">Система спросит о правильности выбора удаляемого устройства.</p>
+                    <img width="591" height="117" data-original="assets/images/section5/dev8.png" class="img-responsive center-block sm-mg-indent" alt="Окно, предупреждающее об удалении устройства">
+                    <p class="sm-mg-indent">После нажатия на кнопку «<b>Да</b>» система отправит на почту письмо с запросом подтверждения на удаление устройства.</p>
+                    <img width="546" height="87" data-original="assets/images/section5/dev9.png" class="img-responsive center-block sm-mg-indent" alt="Предупреждение об отправке на почту письма со ссылкой для удаление выбранного устройства">
+                    <p class="sm-mg-indent">Для того, чтобы завершить удаление устройства, необходимо пройти по ссылке, присланной на e-mail, указанный при.</p>
+                    <img width="844" height="238" data-original="assets/images/section5/dev10.png" class="img-responsive center-block bordered sm-mg-indent" alt="Вид письма со ссылкой для удаления устройства">
+                </div>
+                <!--section5-3-->
+                <div class="inner_content" id="section5-4">
+                    <header>
+                        <h2>Редактирование устройства <i class="sprite sprite-journal"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Выберите устройство из списка устройств и нажмите на кнопку «<b>Редактировать</b>» (<i class="sprite sprite-journal"></i>) в выпадающем меню «<b>Устройство</b>».</p>
+                    <p class="">Или нажмите правой кнопкой мыши на устройстве из списка устройств и в контекстном меню выберите пункт «<b>Редактировать</b>» (<i class="sprite sprite-journal"></i>)</p>
+                    <div class="row sm-mg-indent">
+                        <div class="col-sm-6">
+                            <img width="377" height="305" data-original="assets/images/section5/dev11.png" class="img-responsive center-block bordered" alt="Редактирование устройства посредством пользовательского интерфейса">
+                        </div>
+                        <div class="clearfix visible-xs"></div>
+                        <div class="col-sm-6">
+                            <img width="361" height="375" data-original="assets/images/section5/dev12.png" class="img-responsive center-block bordered" alt="Редактирование устройства посредством контекстного меню">
+                        </div>
+                    </div>
+                    <p class="sm-mg-indent">Откроется окно «<b>Редактирование информации об устройстве</b>».</p>
+                    <h3 class="sm-pd-indent">Редактирование информации об устройстве</h3>
+                    <img width="525" height="601" data-original="assets/images/section5/dev13.png" class="img-responsive center-block sm-mg-indent" alt="Вид окна редактирования устройства">
+                    <ol class="sm-mg-indent">
+                        <li>«<b>Название</b>» - имя устройства, которое будет отображаться в списке устройств.</li>
+                        <li>«<b>Тип</b>» - тип авто, к которому прикреплено устройство (трактор, автобус, автомобиль и пр.)</li>
+                        <li>«<b>Год выпуска</b>» - год выпуска авто, к которому прикреплено устройство.</li>
+                        <li>«<b>Расход топлива</b>» - нормативный расход топлива в литрах (по паспорту автомобиля).</li>
+                        <li>«<b>Марка</b>» - марка авто, к которому прикреплено устройство.</li>
+                        <li>«<b>Гос. номер</b>» - гос. номер, присвоенный авто, к которому прикреплено устройство.</li>
+                        <li>«<b>Допуст. скорость</b>» - в этом поле указывается скорость объекта (км/ч), превышение которой считается нарушением (при отрисовке трека отрезки, на которых было зафиксировано превышение скорости будут отображены красным цветом).</li>
+                        <li>«<b>Номер прибора</b>» - идентификатор устройства, присвоенный сервисом.</li>
+                        <li>«<b>Слив</b>» - объем топлива (в литрах), изменение уровня которого во время стоянки объекта в меньшую сторону будет считаться сливом, если превысит объем указанный в данном поле.</li>
+                        <li>«<b>Заправка</b>» - объем топлива (в литрах), изменение уровня которого во время стоянки объекта в большую сторону будет считаться заправкой, если превысит объем указанный в данном поле.</li>
+                        <li>«<b>Серийный номер</b>» - серийный номер устройства (IMEI).</li>
+                        <li>«<b>Лимит спутников</b>» - количество спутников, которое определяет будут ли отображаться данные, посланные устройством сервису. Если количество спутников, присланное устройством, не превышает указанное в поле число, данные не будут отображаться.</li>
+                        <li>«<b>Статическая</b>» - при выборе данной опции, во время движения авто будет отображаться выбранным из выпадающего списка (14) индикатором. Если опция не выбрана, то в начале движения выбранный индикатор заменяется на стрелку.</li>
+                        <li>Выпадающий список выбора индикаторов, которыми авто может отображаться на карте (по умолчанию: «<b>Стрелка с индикатором</b>»).</li>
+                        <li>Тип устройства (трекера).</li>
+                    </ol>
+                    <blockquote class="sm-mg-indent info">
+                        <p>«<b>Название</b>», «<b>Тип</b>», «<b>Год выпуска</b>», «<b>Марка</b>», «<b>Гос. номер</b>» - информация об автомобиле, на котором установлен трекер. Заполнение данной информации служит исключительно для идентификации автомобиля пользователем и не принимает никакого участия в формировании <a href="#section6">«<b>отчётов</b>»</a>.</p>
+                    </blockquote>
+                    <!--section5-4-->
+                    <div class="">
+                        <h3 class="sm-pd-indent">Настройки расходометра</h3>
+                        <img width="518" height="280" data-original="assets/images/section5/dev14.png" class="img-responsive center-block sm-mg-indent" alt="Вид вкладки настройки расходомера">
+                        <ol>
+                            <li>Активировать порт датчика</li>
+                            <li>Активировать подачу</li>
+                            <li>Выбрать датчик</li>
+                            <li>Импульсов на литр</li>
+                            <li>Импульсов в шаге</li>
+                            <li>Максимальное значение</li>
+                        </ol>
+                    </div>
+                    <!--Настройки расходометра-->
+                    <div class="">
+                        <h3 class="sm-pd-indent">Настройки аналоговых датчиков</h3>
+                        <img width="518" height="281" data-original="assets/images/section5/dev15.png" class="img-responsive center-block sm-mg-indent" alt="Вид вкладки настройки аналоговых датчиков">
+                        <ol>
+                            <li>Включатель обработки системой информации, приходящей с датчика.</li>
+                            <li>Этот флажок следует устанавливать только в том случае, если используется датчик с обратной зависимостью напряжения на выходе от уровня топлива (приведен пример с использованием датчика уровня топлива).</li>
+                            <li>Тип устройства, к которому подключен датчик:
+                                <ul>
+                                    <li>ЮПШ</li>
+                                    <li>Штатный</li>
+                                    <li>Двойной</li>
+                                    <li>Усреднённый (2 в 1)</li>
+                                    <li>Serial</li>
+                                    <li>Serial-OMNI</li>
+                                    <li>Serial-OMNI-CALC</li>
+                                </ul>
+                            </li>
+                            <li>Символьное название датчика.</li>
+                            <li>Символьное название используемых для определения датчиком единиц.</li>
+                            <li>Минимум: значение, при котором бак считается пустым.</li>
+                            <li>Максимум: значение, при котором бак считается полным.</li>
+                            <li>Коэффициент умножения показаний датчика.</li>
+                            <li>Включение расчета по таблице тарировки (кнопка «<b>Таблица тарировки</b>»).</li>
+                        </ol>
+                    </div>
+                    <!--Настройки аналоговых датчиков-->
+                    <div class="">
+                        <h3 class="sm-pd-indent">Тарировочная таблица</h3>
+                        <img width="669" height="532" data-original="assets/images/section5/dev16.png" class="img-responsive center-block sm-mg-indent" alt="Вид окна редактирования тарировочной таблицы">
+                        <ol class="sm-pd-indent">
+                            <li>Количество замеров.</li>
+                            <li>Таблица привязки данных с датчика к реальному уровню топлива. В колонке «<b>Выход</b>» указывается показание датчика, а в колонке «<b>Значение</b>» - уровень топлива, соответствующий показаниям в колонке «<b>Выход</b>»</li>
+                            <li>Графическое представление зависимости уровня топлива от показаний датчика.</li>
+                            <li>Кнопка удаления замера (выделите необходимый замер и нажмите на кнопку удаления).</li>
+                            <li>Температура окружающей среды на момент тарировки бака.</li>
+                            <li>Коэффициент расширения топлива.</li>
+                        </ol>
+                        <blockquote class="sm-pd-indent info">
+                            <p>Поля «<b>Коэффициент</b>» и «<b>Коэффициент расширения</b>» <b><u>не обязательны к заполнению</u></b></p>
+                        </blockquote>
+                    </div>
+                    <!--Тарировочная таблица-->
+                    <div class="">
+                        <h3 class="sm-pd-indent">Настройки дискретных датчиков</h3>
+                        <img width="518" height="281" data-original="assets/images/section5/dev17.png" class="img-responsive center-block sm-mg-indent" alt="Вид вкладки настройки дискретных датчиков">
+                        <ol>
+                            <li>Выбор дискретного датчика.</li>
+                            <li>Включатель обработчика данных с трекера.</li>
+                            <li>Активируйте данную опцию если данный датчик является датчиком зажигания.</li>
+                            <li>Название датчика.</li>
+                            <li>Значение датчика, если датчик вернул значение 1 (0 или 1).</li>
+                            <li>Значение датчика, если датчик вернул значение 0 (0 или 1).</li>
+                            <li>Выключатели оповещений.</li>
+                            <li>Цвет сигнализации, если датчик вернул значение 0.</li>
+                            <li>Цвет сигнализации, если датчик вернул значение 1.</li>
+                            <li>Текст, который будет воспроизведен, если датчик вернул значение 0.</li>
+                            <li>Текст, который будет воспроизведен, если датчик вернул значение 1.</li>
+                            <li>Текст, который будет отображен во всплывающем окне, если датчик вернул значение 0.</li>
+                            <li>Текст, который будет отображен во всплывающем окне, если датчик вернул значение 1.</li>
+                            <li>Показание датчика, при котором считается, что машина едет (при неверном выборе значения могут возникнуть проблемы при отрисовке трека, а так же возможен неверный подсчет километража).</li>
+                            <li>Если выставлен этот флажок, то при смене значения датчика центрируется объект (для которого настроен датчик) и воспроизводится звуковой сигнал.</li>
+                        </ol>
+                    </div>
+                    <!--Настройки дискретных датчиков-->
+                </div>
+                <!--section5-4-->
+            </div>
+            <!--end of section5 Устройства-->
+            <!--Begin of section6 Отчёты-->
+            <div class="content mg-indent" id="section6">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Отчёты</h1>
+                    </header>
+                    <p class="sm-mg-indent">Сервис предоставляет широкие возможности по формированию отчетов.</p>
+                    <p class="sm-mg-indent">Отчет представляет собой выборку по определенному устройству или набору устройств, представленную в виде графической («<b>Трек</b>») или табличной информации.</p>
+                    <p class="sm-mg-indent">Именно отчеты позволяют узнать, где передвигалось или стояло устройство, где и в какое время устройство не могло выйти на связь и т. п..</p>
+                </div>
+                <div class="inner_content" id="section6-1">
+                    <header>
+                        <h2>Типы отчетов</h2>
+                    </header>
+                    <ul class="sm-mg-indent">
+                        <li>Отображение трека на карте</li>
+                        <li>Диагностический</li>
+                        <li>Сводные:
+                            <ul>
+                                <li>итоговый</li>
+                                <li>по поездкам</li>
+                                <li>по стоянкам</li>
+                                <li>по остановкам</li>
+                                <li>по качеству связи</li>
+                                <li>по посещению пользовательских зон</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--section6-1-->
+                <div class="inner_content" id="section6-2">
+                    <header>
+                        <h2>Трек (путь авто на карте) <i class="sprite sprite-add"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Выберите устройство из списка и нажмите на кнопку «<b>Трек</b>» (<i class="sprite sprite-add"></i>) на панели управления вкладки «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>), или нажмите «<b>правой кнопкой мыши</b>» на устройство по которому хотите получить отчет, после чего в выпадающем меню нажмите кнопку «<b>Трек</b>» (<i class="sprite sprite-add"></i>)</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-lg-offset-1 col-lg-5 col-md-offset-0  col-md-6">
+                            <figcaption><b>Через интерфейс:</b></figcaption>
+                            <img width="380" height="387" data-original="assets/images/section6/report01.png" class="img-responsive center-block bordered" alt="Порядок действий для построения трека">
+                        </figure>
+                        <div class="clearfix visible-xs"></div>
+                        <figure class="col-lg-5 col-md-6">
+                            <figcaption><b>Через контекстное меню:</b></figcaption>
+                            <img width="380" height="484" data-original="assets/images/section6/report02.png" class="img-responsive center-block" alt="Порядок действий для построения трека">
+                        </figure>
+                    </div>
+                    <!--row-->
+                    <p class="sm-mg-indent">В открывшемся окне «<b>Загрузка отчета</b>» необходимо ввести интересующий интервал для загрузки трека, а также дополнительные параметры.</p>
+                    <img width="322" height="442" data-original="assets/images/section6/report03.png" class="img-responsive center-block sm-mg-indent" alt="Диалоговое окно построения трека">
+                    <ol class="sm-mg-indent">
+                        <li>Дата начала интервала.</li>
+                        <li>Время начала интервала.</li>
+                        <li>Дата конца интервала.</li>
+                        <li>Время конца интервала.</li>
+                        <li>Если скорость перемещения, не превышающую указанной в этом поле, считается, что автомобиль стоит.</li>
+                        <li>Если автомобиль стоит в течение времени, не менее указанного в этом поле, фиксируется остановка.</li>
+                        <li>Выбор цвета для отрисовки трека.</li>
+                        <li>Ширина трека в пикселах.</li>
+                    </ol>
+                    <p class="sm-mg-indent">После нажатия на кнопку «<b>ОК</b>» на карте отрисуется трек с указанными параметрами.</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="977" height="583" data-original="assets/images/section6/report04.png" class="img-responsive center-block" alt="Вид трека на карте">
+                        </figure>
+                    </div>
+                    <h3 class="mg-indent">Плохой трек:</h3>
+                    <img width="485" height="299" data-original="assets/images/section6/report05.png" class="img-responsive center-block bordered sm-mg-indent" alt="Вид плохого трека, отрисованного на карте">
+                    <p class="sm-mg-indent">Данный трек не является корректным. На нём видны так называемые "прострелы", которые имеют место при невозможности передачи трекером корректной информации о местоположении. Как правило, самыми частыми причинами данного явления могут быть:</p>
+                    <ul>
+                        <li>Сбои в работе оператора сотовой связи (частый случай с абонентами Vodafone);</li>
+                        <li>Отсутствие покрытия GSM сети, накладывающееся на невозможность трекера "запоминать" не переданную информацию (как правило, касается китайских моделей трекеров)</li>
+                        <li>Помехи в работе GPS модуля устройства (как правило, физическое воздействие на трекер или сбои в работе чипа GPS)</li>
+                    </ul>
+                </div>
+                <!--section6-2-->
+                <div class="inner_content" id="section6-3">
+                    <header>
+                        <h2>Формирование диагностического отчета</h2>
+                    </header>
+                    <p class="sm-mg-indent">Диагностический отчет - это «<b>сырые</b>» (не обработанные) данные, которые поступают от устройства. Для получения данного отчета, необходимо нажать «<b>правой кнопкой мыши</b>» на устройство, по которому хотите получить отчет, после чего в выпадающем меню нажать «<b>загрузить отчет</b>» (<i class="sprite sprite-add"></i>) и в подменю выбрать «<b>Диагностический</b>» (<i class="sprite sprite-add"></i>).</p>
+                    <p>Так же можно перейти во вкладку «<b>Отчеты</b>» (<i class="sprite sprite-track"></i> - 1), в выпадающем меню «<b>Выбрать автомобили для отчета</b>» (2) отметить нужный автомобиль (3), выбрать в списке «<b>Диагностический отчет</b>» (4) и, указав нужную дату (5), нажать кнопку «<b>Загрузить</b>» (6)</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <figcaption><b>Через контекстное меню:</b></figcaption>
+                            <img width="449" height="502" data-original="assets/images/section6/report07.png" class="img-responsive center-block bordered" alt="Загрузка диагностического отчёта через контекстное меню">
+                        </figure>
+                        <figure class="nopadding">
+                            <figcaption><b>Через вкладку «<b>Отчёты</b>» (<i class="sprite sprite-track"></i>)</b>
+                            </figcaption>
+                            <div class="col-lg-6">
+                                <img width="428" height="525" data-original="assets/images/section6/report08.png" class="img-responsive center-block bordered" alt="Выбор авто для отчёта">
+                            </div>
+                            <div class="clearfix hidden-lg"></div>
+                            <div class="col-lg-6">
+                                <img width="382" height="523" data-original="assets/images/section6/report09.png" class="img-responsive center-block" alt="Настройка формируемого отчёта">
+                            </div>
+                        </figure>
+                    </div>
+                    <!--row-->
+                    <blockquote class="sm-mg-indent info">
+                        <h3>Подсказка:</h3>
+                        <a href="#section6-5" class="inner-a">Как посмотреть созданный таким образом отчёт</a>
+                    </blockquote>
+                </div>
+                <!--section6-3-->
+                <div class="inner_content" id="section6-4">
+                    <header>
+                        <h2>Формирование сводного отчета</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для получения отчета, необходимо нажать «<b>правой кнопкой мыши</b>» на устройство по которому хотите получить отчет, после чего в выпадающем меню нажмите кнопку «<b>загрузить отчет</b>» далее в выпадающем подменю выбрать «<b>Сводный</b>» или перейдите во вкладку «<b>Отчеты</b>» (<i class="sprite sprite-track"></i> - 1) в выпадающем меню «<b>Выбрать автомобили для отчета</b>» (2) отметить нужный автомобиль (3), в списке «<b>отчеты</b>» (<i class="sprite sprite-track"></i>) отметить нужный отчет (4) выберите период за который будет сформирован отчет (5) и нажать кнопку «<b>Загрузить</b>» (6)</p>
+                    <div class="row sm-mg-indent">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <figure class="nopadding">
+                                    <figcaption><b>Через контекстное меню:</b></figcaption>
+                                    <div class="col-lg-6">
+                                        <img width="460" height="460" data-original="assets/images/section6/report12.png" class="img-responsive center-block bordered" alt="Загрузка сводного отчёта через контекстное меню">
+                                    </div>
+                                    <div class="clearfix hidden-lg"></div>
+                                    <div class="col-lg-6">
+                                        <img width="217" height="253" data-original="assets/images/section6/report11.png" class="img-responsive center-block" alt="Настройка инструмента формировки отчётов">
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <!--<div class="clearfix"></div>-->
+                        <div class="row">
+                            <figure class="col-xs-12">
+                                <figcaption><b>Через вкладку "Отчёты" (<i class="sprite sprite-track"></i>)</b></figcaption>
+                                <div class="col-lg-6">
+                                    <img width="428" height="525" data-original="assets/images/section6/report08.png" class="img-responsive center-block bordered" alt="Выбор устройства для формировки отчётов">
+                                </div>
+                                <div class="clearfix hidden-lg"></div>
+                                <div class="col-lg-6">
+                                    <img width="382" height="525" data-original="assets/images/section6/report13.png" class="img-responsive center-block" alt="Настройка инструмента формирования отчётов">
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!--section6-4-->
+                <div class="inner_content" id="section6-5">
+                    <header>
+                        <h2>Работа со списком отчетов (<i class="sprite sprite-report_list"></i>)</h2>
+                    </header>
+                    <p class="sm-mg-indent">После того, как сформированы интересующие отчеты, их можно просмотреть в виде таблицы. Для просмотра необходимо перейти во вкладку «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>) и нажать на кнопку «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>) после чего откроется окно списка готовых отчётов.</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-lg-6">
+                            <figcaption><b>кнопка "Отчёты" (<i class="sprite sprite-report_list"></i>)</b></figcaption>
+                            <img width="382" height="435" data-original="assets/images/section6/report14.png" class="img-responsive center-block bordered" alt="Вид кнопки показа сформированных (формирующихся) отчётов">
+                        </figure>
+                        <div class="clearfix hidden-lg"></div>
+                        <figure class="col-lg-6">
+                            <figcaption><b>вид списка готовой отчётности</b></figcaption>
+                            <img width="700" height="302" data-original="assets/images/section6/report10.png" class="img-responsive center-block" alt="Вид окна сформированных отчётов">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Таблица состоит из следующих столбцов:</p>
+                    <ol>
+                        <li>Имя устройства</li>
+                        <li>Период, за который запрошен отчёт</li>
+                        <li>Время формирования отчёта</li>
+                        <li>Тип отчета</li>
+                        <li>Состояние:
+                            <ul>
+                                <li><i class="sprite sprite-report_wait"></i> "В очереди" - отображается во время формирования отчета;</li>
+                                <li><i class="sprite sprite-report_download"></i> "Готов" - отчёт сформирован и готов к загрузке;</li>
+                            </ul>
+                        </li>
+                        <li><i class="sprite sprite-delete"></i> Кнопка для удаления отчета</li>
+                    </ol>
+                </div>
+                <!--section6-5-->
+                <div class="inner_content" id="section6-6">
+                    <header>
+                        <h2>Журнал (<i class="sprite sprite-journal"></i>)</h2>
+                    </header>
+                    <p class="sm-mg-indent">Журнал является, аналогом экспортированного в формат XLS трека с информацией об остановках, сливах и заправках. Для того, чтобы открыть журнал, необходимо выбрать отчет с <a href="#section6-2">треком</a> из списка готовых отчетов и нажать на кнопку «<b>Журнал</b>» в панели управления во вкладке «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="380" height="383" data-original="assets/images/section6/report15.png" class="img-responsive center-block" alt="Кновпа показа Журнала">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Журнал с информацией по выбранному отчету развернется внизу в области отображения карты.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="976" height="165" data-original="assets/images/section6/report16.png" class="img-responsive center-block" alt="Вид кнопки показа журнала">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Если журнал уже развернут - достаточно выбрать отчет из списка для отображения в журнале.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="977" height="338" data-original="assets/images/section6/report17.png" class="img-responsive center-block" alt="Общий вид журнала">
+                        </figure>
+                    </div>
+                </div>
+                <!--section6-6-->
+                <div class="inner_content" id="section6-7">
+                    <header>
+                        <h2>Экспорт отчетов <i class="sprite sprite-import-export"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Экспортировать отчеты можно с помощью кнопки «<b>Экспорт</b>» во вкладке «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>)</p>
+                    <p class="sm-mg-indent">Выпадающее меню «<b>Экспорт</b>» позволяет:</p>
+                    <ul>
+                        <li>Экспортировать общую информацию по устройству и трек в формат XLS пункт меню «<b>Журнал</b>».</li>
+                        <li>Экспортировать трек в формат GPX пункт меню «<b>В формат GPX</b>».</li>
+                        <li>Импортировать данные по пропущенным остановкам (пункт меню «<b>Отчет по пропущенным остановкам</b>»).</li>
+                        <li>Экспортировать данные по расходомеру пункт меню «<b>Отчет по расходомеру</b>».</li>
+                    </ul>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="381" height="423" data-original="assets/images/section6/report18.png" class="img-responsive center-block bordered" alt="Вид меню экспорта отчётов">
+                        </figure>
+                    </div>
+                </div>
+                <!--section6-7-->
+                <div class="inner_content" id="section6-8">
+                    <header>
+                        <h2>График изменения скорости и уровня топлива (<i class="sprite sprite-graphic"></i>)</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы просмотреть график изменения скорости и уровня топлива необходимо выбрать готовый <a href="#section6-2">трек</a> из <a href="#section6-5">списка отчетов</a> по интересующему устройству и нажать на кнопку «<b>График</b>» на панели управления во вкладке «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="399" height="473" data-original="assets/images/section6/report20.png" class="img-responsive center-block bordered" alt="Вид меню показа графиков">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">После этого откроется окно с графиками по выбранному отчету. Верхний график показывает уровень топлива, нижний - скорость автомобиля.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="1353" height="626" data-original="assets/images/section6/report19.png" class="img-responsive center-block bordered" alt="Настройка инструмента показа графика топлива и скорости">
+                        </figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Указанный в отчете период.</li>
+                        <li>Интервал отображения графика.</li>
+                    </ol>
+                </div>
+                <!--section6-8-->
+                <div class="inner_content" id="section6-9">
+                    <header>
+                        <h2>Отчет по расходометру (<i class="sprite sprite-add"></i>)</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для получения отчета по Расходомерам необходимо, нажать на кнопку «<b>отчет по расходометру</b>» после чего, в появившемся меню внести настройки (период времени (1), скорость и заправка (2), выбрать автомобиль (3)) и нажать кнопку «<b>Загрузить</b>», или кликнуть правой кнопкой на одном из устройств в меню «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) и в открывшемся меню выбрать пункт «<b>Загрузить отчет</b>» и выбрать «<b>Расходомер</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="nopadding">
+                            <figcaption><b>Через контекстное меню:</b></figcaption>
+                            <div class="col-lg-6">
+                                <img width="416" height="501" data-original="assets/images/section6/report23.png" class="img-responsive center-block bordered" alt="Создание отчёта по расходомеру через контекстное меню">
+                            </div>
+                            <div class="clearfix hidden-lg"></div>
+                            <div class="col-lg-6">
+                                <img width="415" height="117" data-original="assets/images/section6/report24.png" class="img-responsive center-block" alt="Предварительный выбор временного промежутка для создания отчёта по расходомеру">
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <figcaption><b>Через вкладку "Отчёты" (<i class="sprite sprite-track"></i>)</b></figcaption>
+                            <img width="401" height="411" data-original="assets/images/section6/report06.png" class="img-responsive center-block bordered" alt="Создание отчёта по расходомеру через пользовательский интерфейс">
+                        </figure>
+                    </div>
+                    <div class="row sm-mg-indent">
+                        <figure class="nopadding">
+                            <div class="col-lg-6">
+                                <img width="390" height="194" data-original="assets/images/section6/report21.png" class="img-responsive center-block bordered" alt="Настройка отчёта оп маршрутам">
+                            </div>
+                            <div class="clearfix hidden-lg"></div>
+                            <div class="col-lg-6">
+                                <img width="391" height="302" data-original="assets/images/section6/report22.png" class="img-responsive center-block" alt="Выбор авто для создания отчёта оп маршрутам">
+                            </div>
+                        </figure>
+                    </div>
+                    <!--picture row-->
+                    <p class="sm-mg-indent">В результате будет сформирован отчет, который имеет вид:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="394" height="479" data-original="assets/images/section6/report25.png" class="img-responsive center-block" alt="Вид отчёта по расходомеру">
+                        </figure>
+                    </div>
+                </div>
+                <!--section6-9-->
+                <div class="inner_content" id="section6-10">
+                    <header>
+                        <h2>Отчет по моточасам (<i class="sprite sprite-add"></i>)</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для получения отчета по моточасам, необходимо кликнуть правой кнопкой мыши на устройство из списка во вкладке «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) и в открывшемся меню выбрать пункт «<b>Загрузить отчет</b>» и выбрать «<b>Моточасы</b>», внести настройки в появившемся окне и нажать кнопку «<b>Загрузить</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="nopadding">
+                            <figcaption><b>Через контекстное меню:</b></figcaption>
+                            <div class="col-lg-6">
+                                <img width="407" height="501" data-original="assets/images/section6/report26.png" class="img-responsive center-block bordered" alt="Создание отчёта по моточасам через контекстное меню">
+                            </div>
+                            <div class="clearfix hidden-lg"></div>
+                            <div class="col-lg-6">
+                                <img width="414" height="116" data-original="assets/images/section6/report27.png" class="img-responsive center-block" alt="Выбор временного промежутка для формирования отчёта по моточасам">
+                            </div>
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В результате будет сформирован отчет, который имеет вид:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="700" height="368" data-original="assets/images/section6/report28.png" class="img-responsive center-block bordered" alt="Вид отчёта по моточасам">
+                        </figure>
+                    </div>
+                </div>
+                <!--section6-10-->
+            </div>
+            <!--end of section6 Отчёты-->
+            <!--Begin of section7 Объекты-->
+            <div class="content mg-indent" id="section7">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Объекты <i class="sprite sprite-flag"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Объект - это место на карте, определенное пользователем с символьным названием, иконкой и радиусом покрытия. Для того, чтобы начать работу с объектами необходимо перейти во вкладку «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) во вкладках управления сервисом.</p>
+                    <img width="400" height="317" data-original="assets/images/section7/objects1.png" class="img-responsive center-block bordered sm-mg-indent" alt="Вид вкладки Объекты">
+                    <ol class="sm-mg-indent">
+                        <li>Кнопка вызова формы добавления объекта на карту;</li>
+                        <li>Кнопка вызова формы редактирования объекта;</li>
+                        <li>Кнопка удаления объекта;</li>
+                        <li>Кнопка принудительного обновления списка объектов;</li>
+                        <li>Кнопка вызова формы импорта объектов из CSV-файла;</li>
+                        <li>Список объектов.</li>
+                    </ol>
+                </div>
+                <div class="inner_content" id="section7-1">
+                    <header>
+                        <h2 class="mg-indent">Добавление объекта на карту</h2>
+                    </header>
+                    <p class="sm-mg-indent">На карту можно добавлять пользовательские «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) для быстрого и точного поиска Ваших мест. К объекту можно привязать контактную информацию, приминить разрешение санкционированного слива топлива. Пользовательские «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) помогают в составлении маршрута следования.</p>
+                    <p class="sm-mg-indent">Чтобы добавить объект на карту, на панели инструментов нужно нажать на кнопку «<b>флажка</b>» ( <i class="sprite sprite-addobject"></i> ) и нажать на карте на место, где объект должен будет находиться:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="662" height="320" data-original="assets/images/section7/objects2.png" class="img-responsive center-block bordered" alt="Создание объекта на карте">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Или же можно нажать кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>), во вкладке «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>), после чего кликнуть на то место на карте, в котором должен будет располагаться объект:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="662" height="320" data-original="assets/images/section7/objects3.png" class="img-responsive center-block bordered" alt="Создание объекта на карте">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Далее следует заполнить форму добавления объекта:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="405" height="320" data-original="assets/images/section7/objects4.png" class="img-responsive center-block bordered" alt="Форма добавления объекта">
+                        </figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Поле ввода названия объекта.</li>
+                        <li>Поле ввода описания объекта.</li>
+                        <li>Если выставлен этот флажок, то адрес в поле ввода адреса (4) можно не заполнять - система определит адрес автоматически.</li>
+                        <li>Поле ввода для адреса объекта.</li>
+                        <li>Поле ввода для контактного телефона объекта.</li>
+                        <li>Выпадающий список с иконками для обозначения объекта на карте.</li>
+                        <li>Поле ввода радиуса покрытия объекта в метрах. Радиус покрытия объекта - это зона вокруг объекта, при входе в которую считается, что устройство находится на объекте.</li>
+                        <li>Если выставлен флажок «<b>Игнорировать сливы до</b>», то уменьшение уровня топлива на этом объекте не будет считаться сливом, если не превысит значения, указанного в поле ввода.</li>
+                    </ol>
+                    <p class="sm-mg-indent">Далее необходимо нажать на кнопку «<b>Сохранить</b>».</p>
+                </div>
+                <!--section7-1-->
+                <div class="inner_content" id="section7-2">
+                    <header>
+                        <h2 class="mg-indent">Редактирование объектов <i class="sprite sprite-journal"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы отредактировать информацию об объекте, необходимо перейти во вкладку «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) во вкладках управления сервисом, выбрать из списка объект, информацию о котором нужно отредактировать, и нажать на кнопку «<b>Редактировать</b>» в панели управления вкладки «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="291" data-original="assets/images/section7/objects5.png" class="img-responsive center-block bordered" alt="Вкладка Объекты"></figure>
+                    </div>
+                </div>
+                <!--section7-2-->
+                <div class="inner_content" id="section7-3">
+                    <header>
+                        <h2 class="mg-indent">Импорт объектов <i class="sprite sprite-import-export"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того чтобы импортировать объекты из <b>CSV</b>-файла в сервис, необходимо нажать на кнопку «<b>Импорт</b>» на панели управления вкладки «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) во вкладках управления сервисом.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="267" data-original="assets/images/section7/objects6.png" class="img-responsive center-block bordered" alt="Значок инструмента импорта объектов"></figure>
+                    </div>
+                    <p class="sm-mg-indent">В открывшемся окне «<b>Импорт объектов в CSV формате</b>» необходимо выбрать <b>CSV</b>-файл на жестком диске своего компьютера (кнопка «<b>Открыть</b>») и импортировать его в сервис (кнопка «<b>Загрузить</b>»).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="354" height="131" data-original="assets/images/section7/objects7.png" class="img-responsive center-block bordered" alt="Окно выбора CSV файла для импорта"></figure>
+                    </div>
+                    <h3 class="mg-indent">Формирование CSV-файла</h3>
+                    <p class="sm-mg-indent">Создайте таблицу в MS Excell и заполните поля таблицы, как показано на рисунке (вместо слов сразу идут данные в указанном порядке).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="800" height="124" data-original="assets/images/section7/objects8.png" class="img-responsive center-block bordered" alt="Вид CSV файла"></figure>
+                    </div>
+                    <p class="sm-mg-indent">Поля таблицы:</p>
+                    <ol class="sm-mg-indent">
+                        <li>имя объекта;</li>
+                        <li>радиус покрытия объекта в метрах (целое число);</li>
+                        <li>координата Х (в градусах);</li>
+                        <li>координата Y (в градусах);</li>
+                        <li>флажок «<b>Игнорировать сливы до</b>» (1 - да, 0 - нет);</li>
+                        <li>количество литров, до которого будет игнорироваться слив (целое число).</li>
+                    </ol>
+                    <p class="sm-mg-indent">Далее сохраните файл в формате CSV. Для этого необходимо выполнить следующие шаги:</p>
+                    <p class="sm-mg-indent">Файл → Сохранить как → Выберите тип файла из выпадающего списка csv (разделители - запятые) → введите имя файла и сохраните его на жестком диске своего компьютера.</p>
+                </div>
+                <!--section7-3-->
+            </div>
+            <!--end of section7 Объекты-->
+            <!--Begin of section8 Зоны-->
+            <div class="content mg-indent" id="section8">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Зоны <i class="sprite sprite-zone"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Инструмент «<b>Зоны</b>» (<i class="sprite sprite-zone"></i>) используется для учета местоположения и прохождения объектом географических зон.</p>
+                    <p>Данный инструмент необходим при оповещении пользователя ресурса при пересечении объектом зоны (вход и/или выход), в актуальном времени или за заданный период. Это удобно, если необходимо быть информированным о выезде объекта из разрешенной области за пределы разрешенной территории или же достижения транспортного средства необходимой области (например, чтобы оповестить заказчика о приближении экспедиционного автомобиля).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="240" data-original="assets/images/section8/zones1.png" class="img-responsive center-block bordered" alt="Вид вкладки Зоны"></figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Кнопка вызова формы добавления зоны на карту;</li>
+                        <li>Кнопка вызова формы редактирования зоны;</li>
+                        <li>Кнопка удаления зоны;</li>
+                        <li>Кнопка принудительного обновления списка зон;</li>
+                        <li>Кнопка вызова формы экспорта зон в CSV-файл;</li>
+                        <li>Список зон.</li>
+                    </ol>
+                </div>
+                <div class="inner_content" id="section8-1">
+                    <header>
+                        <h2 class="mg-indent">Добавление новой зоны на карту <i class="sprite sprite-add"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Чтобы добавить зону на карту, на панели инструментов нужно нажать на кнопку добавления новой зоны ( <i class="sprite sprite-addzone"></i> ):</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="616" height="303" data-original="assets/images/section8/zones8.png" class="img-responsive center-block bordered" alt="Значок добавления новой зоны на карту на панели инструментов"></figure>
+                    </div>
+                    <p class="sm-mg-indent">Или же перейдите во вкладку «<b>Зоны</b>» (<i class="sprite sprite-zone"></i>) в закладках управления сервисом и нажмите кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="234" data-original="assets/images/section8/zones2.png" class="img-responsive center-block bordered" alt="Значок добавления новой зоны на карту"></figure>
+                    </div>
+                    <p class="sm-mg-indent">Далее необходимо перевести курсор в область отображения карты и нажатиями левой кнопки мыши отметить точки очертания зоны:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="600" height="515" data-original="assets/images/section8/zones3.png" class="img-responsive center-block bordered" alt="Вид зоны на карте"></figure>
+                    </div>
+                    <p class="sm-mg-indent">Поле окончания формирования очертаний зоны, необходимо сделать на ней двойной клик для вызова окна редактирования информации о зоне.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="500" height="300" data-original="assets/images/section8/zones4.png" class="img-responsive center-block bordered" alt="Окно создания новой зоны"></figure>
+                    </div>
+                    <ol class="sm-pd-indent">
+                        <li>Символьное название зоны.</li>
+                        <li>Если выставлен этот флажок, то вход/выход устройств в данную зону обрабатывается.</li>
+                        <li>Этот флажок временно не обрабатывается.</li>
+                        <li>Если выставлен этот флажок, то слив в данной зоне будет игнорироваться, если он не превышает значения, определенного в поле (5).</li>
+                        <li>Поле значения, которое указывает, до какого количества литров игнорируется слив.</li>
+                        <li>Цвет зоны на карте.</li>
+                        <li>Настройка прозрачности зоны на карте.</li>
+                        <li>Описание зоны.</li>
+                        <li>Список устройств для обработки в зоне.</li>
+                        <li>Включение/отключение обработчиков событий входа и выхода устройства из зоны.</li>
+                    </ol>
+                </div>
+                <!--section8-1-->
+                <div class="inner_content" id="section8-2">
+                    <header>
+                        <h2 class="mg-indent">Редактирование информации о зоне <i class="sprite sprite-journal"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы информацию о существующей зоне, необходимо выбрать интересующую Вас зону из списка и нажать на кнопку «<b>Редактировать</b>» в панели управления вкладки «<b>Зоны</b>» (<i class="sprite sprite-zone"></i>) во вкладках управления сервисом.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="240" data-original="assets/images/section8/zones5.png" class="img-responsive center-block bordered" alt="Вид вкладки Зоны"></figure>
+                    </div>
+                    <p class="sm-mg-indent">В открывшемся окне необходимо внести изменения в нужные поля и нажать на кнопку «<b>ОК</b>».</p>
+                </div>
+                <!--section8-2-->
+                <div class="inner_content" id="section8-3">
+                    <header>
+                        <h2 class="mg-indent">Работа со списком зон</h2>
+                    </header>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="156" data-original="assets/images/section8/zones6.png" class="img-responsive center-block bordered" alt="Вид вкладки Зоны"></figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Вкл/Выкл отображения зоны на карте;</li>
+                        <li>Имя зоны;</li>
+                        <li>Описание зоны;</li>
+                        <li>Площадь зоны.</li>
+                    </ol>
+                </div>
+                <!--section8-3-->
+                <div class="inner_content" id="section8-4">
+                    <header>
+                        <h2 class="mg-indent">Экспорт зон <i class="sprite sprite-import-export"></i></h2>
+                    </header>
+                    <p class="sm-mg-indent">Для дальнейшего анализа зон, зоны можно экспортировать в формат xml, для этого надо нажать на кнопку «<b>Экспорт</b>». Файл автоматически сохранится на локальный диск.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="400" height="230" data-original="assets/images/section8/zones7.png" class="img-responsive center-block bordered" alt="Значок экспорта зон"></figure>
+                    </div>
+                </div>
+                <!--section8-4-->
+            </div>
+            <!--end of section8 Зоны-->
+            <!--Begin of section9 Пользовательские события-->
+            <div class="content mg-indent" id="section9">
+                <header>
+                    <h1 class="text-center">Пользовательские события <i class="sprite sprite-notify"></i></h1>
+                </header>
+                <p class="sm-mg-indent">Для оповещения пользователя о срабатывании событий, которые он может настроить на своё усмотрение, предусмотрена вкладка «<b>Пользовательские события</b>» (<i class="sprite sprite-notify"></i>).</p>
+                <div class="inner_content" id="section9-1">
+                    <header>
+                        <h2>Создание события</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для создания события, необходимо нажать кнопку «<b>Создать</b>» во вкладке «<b>Пользовательские события</b>» (<i class="sprite sprite-notify"></i>)</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="400" height="190" data-original="assets/images/section9/event01.png" class="img-responsive center-block bordered" alt="Кнопка создания пользовательского события">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">После чего появляется диалоговое окно с настройками.</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="857" height="617" data-original="assets/images/section9/event02.png" class="img-responsive center-block" alt="Общий вид окна создания пользовательского события">
+                        </figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Название пользовательского события.</li>
+                        <li>Включение наблюдения за событием.</li>
+                        <li>Цвет заливки оповещения.</li>
+                        <li>Включение особого условия срабатывания уведомления «<b>На протяжении</b>».</li>
+                        <li>Установка времени срабатывания уведомления «<b>На протяжении</b>» в секундах.</li>
+                        <li>Список всех устройств на логине. Для выбора устройства для которого будет вестись наблюдение о срабатывании события, нужно кликнуть по квадратику слева от его названия.</li>
+                        <li>Выбор определенной машины для мониторинга.</li>
+                        <li>Форма для ввода условия при котором будет срабатывать событие. Список параметров для условий прилагается ниже.</li>
+                        <li>Проверка условия на корректность ввода.</li>
+                        <li>Очистить поле ввода условия.</li>
+                        <li>Сохранение данных.</li>
+                        <li>Закрытие диалогового окна без сохранения данных.</li>
+                    </ol>
+                </div>
+                <!--section9-1-->
+                <div class="inner_content" id="section9-2">
+                    <header>
+                        <h2>Настройка уведомлений.</h2>
+                    </header>
+                    <h3 class="-sm-mg-indent">Вкладка "Журнал".</h3>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="679" height="220" data-original="assets/images/section9/event03.png" class="img-responsive center-block" alt="настройка вывода событий в Журнал">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li>Вкладка для настройки уведомлений в журнал.</li>
+                        <li>Включение вывода в журнал.</li>
+                        <li>Включение звукового оповещения в окно пользователя с блокированием экрана до тех пока оно не будет закрыто.</li>
+                    </ul>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="398" height="200" data-original="assets/images/section9/eventalarm.png" class="img-responsive center-block" alt="Вид окна тревоги на экране">
+                        </figure>
+                    </div>
+                    <h3 class="mg-indent">Вкладка "E-mail".</h3>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="679" height="219" data-original="assets/images/section9/event04.png" class="img-responsive center-block" alt="Настройка e-Mail уведомлений при сработке пользовательских событий">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li>Вкладка для настройки уведомлений на электронную почту.</li>
+                        <li>Включение уведомления по почте.</li>
+                        <li>Выбор времени отправки электронного письма.</li>
+                        <li>Адрес электронной почты получателя.</li>
+                        <li>Поле для внесения текста в электронном письме.</li>
+                    </ul>
+                    <h3 class="mg-indent">Вкладка "СМС".</h3>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="678" height="219" data-original="assets/images/section9/event05.png" class="img-responsive center-block" alt="Настройка SMS уведомлений при сработке пользовательских событий">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li>Вкладка для настройки смс уведомлений на мобильный телефон.</li>
+                        <li>Включение уведомления через СМС.</li>
+                        <li>Выбор времени отправки СМС.</li>
+                        <li>Телефонный номер получателя в международном формате (+380 (12) 345 6789).</li>
+                        <li>Поле для внесения текста сообщения.</li>
+                    </ul>
+                    <h3 class="mg-indent">Вкладка "Всплывающее окно".</h3>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="678" height="218" data-original="assets/images/section9/event06.png" class="img-responsive center-block" alt="Настройка всплывающих уведомлений при сработке пользовательских событий">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li>Вкладка для настройки всплывающих окон.</li>
+                        <li>Включить оповещение с помощью всплывающего окна.</li>
+                        <li>Включить звуковое сопровождение при уведомлении.</li>
+                        <li>Выбор времени оповещения.</li>
+                    </ul>
+                    <div class="row mg-indent">
+                        <figure class="">
+                            <img width="320" height="224" data-original="assets/images/section9/user_event_popup.png" class="img-responsive center-block" alt="Вид всплывающих уведомлений при сработке пользовательских событий">
+                        </figure>
+                    </div>
+                    <h3 class="mg-indent">Вкладка "Визуальное оповещение".</h3>
+                    <p class="sm-mg-indent">Визуальное оповещение - это функция с помощью которой окрашивается авто в списке автомобилей в определенный цвет, при срабатывании оповещения.</p>
+                    <div class="row sm-mg-indent">
+                        <figure class="">
+                            <img width="679" height="219" data-original="assets/images/section9/event07.png" class="img-responsive center-block" alt="Настройка визуальных оповещений при сработке пользовательских событий">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li>Вкладка визуального оповещения.</li>
+                        <li>Включение визуального оповещения.</li>
+                        <li>Выбор цвета оповещения.</li>
+                    </ul>
+                </div>
+                <!--section9-2-->
+                <div class="inner_content" id="section9-3">
+                    <header>
+                        <h2>Список допустимых параметров и значений в пользовательских событиях.</h2>
+                    </header>
+                    <!--Таблица команд-->
+                    <div class="row">
+                        <div class="table-responsive sm-mg-indent">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="column-one">Параметр</th>
+                                        <th class="column-two">Описание</th>
+                                        <th class="column-three">Значение</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>x_direct</th>
+                                        <td>х полушарие</td>
+                                        <td>Символ Е или N</td>
+                                    </tr>
+                                    <tr>
+                                        <th>y_direct</th>
+                                        <td>у полушарие</td>
+                                        <td>Символ Е или N</td>
+                                    </tr>
+                                    <tr>
+                                        <th>speed</th>
+                                        <td>Скорость
+                                            <br/>(в морских узлах) </td>
+                                        <td>Целое или дробное число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>a1-a4</th>
+                                        <td>Аналоговые входы</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>satelites</th>
+                                        <td>Кол-во спутников</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>d1-d10 </th>
+                                        <td>Дискретные входы</td>
+                                        <td>True или False
+                                            <br/>(да или нет)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>х</th>
+                                        <td>Координата х, формат NMEA</td>
+                                        <td>Целое или дробное число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>у</th>
+                                        <td>Координата у, формат NMEA</td>
+                                        <td>Целое или дробное число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>serial1-serial10</th>
+                                        <td>Цифровые входы</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gsmlevel</th>
+                                        <td>Уровень сигнала GSM</td>
+                                        <td>Целое число, диапозон от 0 до 7</td>
+                                    </tr>
+                                    <tr>
+                                        <th>batlevel</th>
+                                        <td>Уровень заряда батерии</td>
+                                        <td>Целое число, диапозон от 0 до 7</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gpsac</th>
+                                        <td>Подключена ли GPS антена</td>
+                                        <td>True или False
+                                            <br/>(да или нет)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>charger</th>
+                                        <td>Подключение внешнего питания</td>
+                                        <td>True или False
+                                            <br/>(да или нет)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>hashistory</th>
+                                        <td>Присутствие данных в памяти</td>
+                                        <td>True или False
+                                            <br/>(да или нет)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ip</th>
+                                        <td>IP адрес с которого пришла посылка</td>
+                                        <td>Строка</td>
+                                    </tr>
+                                    <tr>
+                                        <th>traff</th>
+                                        <td>Трафик потребляемый устройством (в байтах)</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gsm_lac</th>
+                                        <td>Код локальной зоны</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gsm_cell_id</th>
+                                        <td>Идентификатор соты</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gsm_mcc</th>
+                                        <td>Kод страны, в которой находится базовая станция</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>gsm_mnc</th>
+                                        <td>код сотовой сети</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>counter1-counter4</th>
+                                        <td>Счетчик импульсов (для импульсного датчика)</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>temp_sensor1</th>
+                                        <td>Датчик температуры</td>
+                                        <td>Целое или дробное число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>nogprs</th>
+                                        <td>Отсутствие GPRS</td>
+                                        <td>Целое число. В секундах</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3" class="text-center">Логические операторы</th>
+                                    </tr>
+                                    <tr>
+                                        <th>&lt;, &gt;, &lt;=, &gt;= </th>
+                                        <td colspan="2">Меньше, больше, меньше-равно, больше-равно</td>
+                                    </tr>
+                                    <tr>
+                                        <th>and</th>
+                                        <td colspan="2">И</td>
+                                    </tr>
+                                    <tr>
+                                        <th>or</th>
+                                        <td colspan="2">Или</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3" class="text-center">Функции</th>
+                                    </tr>
+                                    <tr>
+                                        <th>inzone()</th>
+                                        <td>Принимает ID зоны (ID можно посмотреть кликнув на зону в веб-версии). Возвращает TRUE если устройство находиться в заданной зоне и FALSE если нет.</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                    <tr>
+                                        <th>inobject()</th>
+                                        <td>Принимает ID объекта. Алгоритм работы аналогичен функции inzone</td>
+                                        <td>Целое число</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--.table-responsive-->
+                    </div>
+                    <!--конец таблицы команд-->
+                    <blockquote class="sm-mg-indent example">
+                        <h3>Примеры</h3>
+                        <b>inzone(223) = true and speed > 3</b> - сработает при входе авто в пользовательскую зону c ID 223 при скорости больше 3-х узлов.
+                        <br/>
+                        <b>inzone(223) = false</b> - сработает при покидании устройством зоны с ID 223.
+                        <br/>
+                        <b>satelites &lt; 5</b> - сработает при количестве видимых (трекером) GPS спутников меньше пяти.
+                        <br/>
+                        <b>charger = false or nogprs = 600</b> - сработает при отсоединении трекера от бортовой цепи питания <b>или</b> при отсутствии связи с трекером в течение 10 минут.
+                        <br/>
+                        <b>batlevel &lt; 50 and charger = false</b> - сработает при отсутствии питания на трекере <b>и</b> заряде батареи ниже пятидесяти процентов. </blockquote>
+                </div>
+                <!--section9-3-->
+            </div>
+            <!--end of section9 Пользовательские события-->
+            <!--Begin of section10 Рассылка автоматических отчётов-->
+            <div class="content mg-indent" id="section10">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Рассылка автоматических отчётов <i class="sprite sprite-auto_report"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Автоотчёты являют собой возможность получения отчётов по передвижению устройства за прошлые периоды (сутки, неделя, месяц) без надобности формирования отчётов через интерфейс системы мониторинга. Созданные таким образом отчёты автоматически отсылаются <u>на e-mail</u> пользователя, указанный при регистрации.</p>
+                </div>
+                <div class="inner_content" id="section10-1">
+                    <header>
+                        <h2>Общие сведения об автоматических отчетах</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы начать работу с автоматическими отчетами необходимо перейти во вкладку «<b>Рассылка автоматических отчетов</b>» (<i class="sprite sprite-auto_report"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="401" height="285" data-original="assets/images/section10/autoreport01.png" class="img-responsive center-block bordered" alt="Вид вкладки рассылки автоматических отчётов"></figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Кнопка вызова формы создания нового автоматического отчета.</li>
+                        <li>Кнопка вызова формы редактирования существующего автоматического отчета.</li>
+                        <li>Кнопка удаления автоматического отчета.</li>
+                        <li>Список автоматических отчетов.</li>
+                    </ol>
+                </div>
+                <!--section10-1-->
+                <div class="inner_content" id="section10-2">
+                    <header>
+                        <h2>Создание автоматического отчета</h2>
+                    </header>
+                    <p class="sm-mg-indent">Для того, чтобы создать автоматический отчет, необходимо нажать на кнопку «<b>Создать</b>» во вкладке «<b>Рассылка автоматических отчетов</b>» (<i class="sprite sprite-auto_report"></i>).</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="401" height="123" data-original="assets/images/section10/autoreport02.png" class="img-responsive center-block bordered" alt="Кнопка создания автоматического отчёта">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Откроется окно создания автоматических отчетов.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="411" height="407" data-original="assets/images/section10/autoreport03.png" class="img-responsive center-block" alt="Окно добавления автоматического отчёта">
+                        </figure>
+                    </div>
+                    <ol class="sm-mg-indent">
+                        <li>Список устройств клиента;</li>
+                        <li>Список доступных типов отчетов: суточный, недельный, месячный;</li>
+                        <li>Формат отчета: .doc; .xls; .csv;</li>
+                        <li>Скорость, при которой будет считаться остановка, если устройство движется со скоростью не выше указанной в этом поле;</li>
+                        <li>Если устройство двигалось со скоростью, указанной в поле (4), свыше указанного в этом поле времени, будет считаться остановка;</li>
+                        <li>Время отправки отчета клиенту;</li>
+                        <li>Выбор доступных видов отчетов.</li>
+                    </ol>
+                </div>
+                <!--section10-2-->
+            </div>
+            <!--end of section10 Рассылка автоматических отчётов-->
+            <!--Begin of section11 Маршруты-->
+            <div class="content mg-indent" id="section11">
+                <div class="header_wrapper">
+                    <header>
+                        <h1 class="text-center">Маршруты <i class="sprite sprite-road"></i></h1>
+                    </header>
+                    <p class="sm-mg-indent">Работа с маршрутами представляет собой удобный способ контроля компанией-перевозчиком выполнения норм, установленных для работников компании (контроль водителей).</p>
+                </div>
+                <div class="inner_content" id="section11-1">
+                    <header>
+                        <h2>Остановки и создание маршрута</h2>
+                    </header>
+                    <p class="sm-mg-indent">Прежде чем создать маршрут, следует создать «<b>остановки</b>» этого маршрута. (не контрольные точки)</p>
+                    <h3 class="mg-indent">Остановки <i class="sprite sprite-avt"></i></h3>
+                    <p class="sm-mg-indent">Для создания остановок необходимо открыть вкладку «<b>Остановки</b>» ( <i class="sprite sprite-avt"></i> ), далее нажать кнопку «<b>Добавить</b>» (<i class="sprite sprite-add"></i>) и указать кликом на карте в том месте, где должна находиться остановка.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="380" height="151" data-original="assets/images/section11/route01.png" class="img-responsive center-block bordered" alt="Кнопка создания Остановки">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В открывшемся окне внести необходимые данные:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="406" height="271" data-original="assets/images/section11/route02.png" class="img-responsive center-block" alt="Настройка Остановки перед созданием">
+                        </figure>
+                    </div>
+                    <ul class="sm-mg-indent">
+                        <li><b>Название:</b> название остановка при отображении на карте.</li>
+                        <li><b>Описание и адрес</b> будут выводиться во всплывающем окне при наведении на остановку.</li>
+                        <li><b>Иконка:</b> выбор рисунка для отображения остановки на карте.</li>
+                        <li><b>Радиус покрытия объекта:</b> зона, в пределах которой будет определяться факт посещения остановки или нахождения на ней в данный момент.</li>
+                    </ul>
+                    <blockquote class="sm-mg-indent info">
+                        <p class=""><b>"Радиус покрытия объекта"</b> - это важный параметр для создания маршрута. При работе с ним необходимо учитывать два правила: радиусы двух остановок не должны пересекаться и прямое направление маршрута не должно проходить через радиус остановки, если она есть только на обратном направлении. Для этого либо уменьшаются радиусы, либо, если остановки обоих направлений находятся рядом, делается одна зона с большим радиусом.</p>
+                    </blockquote>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="517" height="416" data-original="assets/images/section11/route03.png" class="img-responsive center-block bordered" alt="Вид остановок на карте">
+                        </figure>
+                    </div>
+                    <blockquote class="sm-mg-indent info">
+                        <h3>Подсказка:</h3>
+                        <p>Разместить остановки можно следующим образом: загрузите трек по устройству. В местах, где останавливался авто, расставьте остановки. Перейдите во вкладку «<b>Отчеты</b>» (<i class="sprite sprite-track"></i>), запомните место стоянки, выключите отображение трека на карте и поместите на его месте остановку. </p>
+                    </blockquote>
+                    <div class="row sm-mg-indent">
+                        <figure class="col-lg-6">
+                            <figcaption><b></b></figcaption>
+                            <img width="674" height="360" data-original="assets/images/section11/route04.png" class="img-responsive bordered center-block" alt="Вид остановки на карте">
+                        </figure>
+                        <div class="clearfix hidden-lg"></div>
+                        <figure class="col-lg-6">
+                            <figcaption><b></b></figcaption>
+                            <img width="635" height="360" data-original="assets/images/section11/route05.png" class="img-responsive bordered center-block" alt="Вид трека на карте">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Ещё более точный вариант будет, если к трекеру подключен датчик дверей. Номер порта прописывается в «<b>Редактировании устройства</b>» во вкладке «<b>Дискретные датчики</b>». Затем на необходимой вкладке датчика по номеру его порта ставим галочки напротив «<b>Включить</b>» и «<b>контроль движения</b>» и выбираем «<b>1</b>» или «<b>0</b>» в контроле движения в зависимости от того, на какое значение идёт открытие дверей.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="532" height="603" data-original="assets/images/section11/route06.png" class="img-responsive center-block" alt="Настройка датчика открытия дверей">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Теперь, после загрузки трека на карте будут показаны только те точки, где открывались двери. </p>
+                    <h3 class="mg-indent">Создание маршрута</h3>
+                    <p class="sm-mg-indent">После того, как расставлены все остановки, можно перейти к созданию самого маршрута. Для этого необходимо нажать на кнопку «<b>Создать</b>» во вкладке «<b>Маршруты</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="380" height="183" data-original="assets/images/section11/route07.png" class="img-responsive center-block bordered" alt="Кнопка создания Маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В появившемся окне заполните поля:</p>
+                    <ul class="sm-mg-indent">
+                        <li><b>имя маршрута:</b> имя в системе;</li>
+                        <li><b>ограничение скорости на маршруте:</b> будет сигнализировать диспетчеру о превышении и указываться в нарушениях только в пределах маршрута;</li>
+                        <li><b>выберите цвет для маршрута:</b> этим цветом маршрут будет отображаться на карте и обозначаться в некоторых отчетах;</li>
+                        <li><b>минимальное время остановки:</b> время, меньше которого будет считаться проезд без остановки;</li>
+                        <li><b>максимальное время остановки:</b> необходимо для определения затягивания графика движения или поломок;</li>
+                        <li><b>запланированное количество рейсов:</b> учитывается для одного транспортного средства по умолчанию и отображается в отчетах для сравнения с фактическим;</li>
+                        <li><b>информация о диспетчере:</b> будет выводиться в отчетах по маршруту;</li>
+                        <li><b>учитывать только конечные точки:</b> считает рейс полным только по конечным точкам;</li>
+                        <li><b>рейс - прохождение обоих направлений:</b> нужно, если рейс считается прохождением маршрута в обе стороны или маршрут кольцевой.</li>
+                    </ul>
+                    <p class="sm-mg-indent">Следующий шаг, это составление самого маршрута.</p>
+                    <p class="sm-mg-indent">В появившемся окне есть три столбца: «<b>Объекты</b>» (<i class="sprite sprite-flag"></i>) - здесь находятся все созданные нами остановки и два столбца направлений маршрута. Если у маршрута есть только одно направление, столбец обратного направления не заполняется.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="800" height="601" data-original="assets/images/section11/route09.png" class="img-responsive center-block" alt="Коно настройки и создания маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Перетягиваем нужные остановки в столбец каждого из направлений в той очерёдности, в которой они находятся на маршруте. Каждая точка сразу же будет отображена на карте, между остановками система автоматически прокладывает оптимальный маршрут по дорогам. После того, как расставлены все остановки и линии маршрута проложены верно, жмём «<b>Далее</b>» и в последней вкладке «<b>Готово</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="770" height="334" data-original="assets/images/section11/route10.png" class="img-responsive center-block bordered" alt="Кнопки Редактирования и Удаления созданного маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Созданные маршруты будут отображены в соответствующей вкладке. Здесь можно выбрать показ их на карте, выбрав соответствующий, редактировать и удалять. В правом углу вкладки есть две кнопки для выключения отображения маршрута на карте и обновления информации.</p>
+                </div>
+                <!--section11-1-->
+                <div class="inner_content" id="section11-2">
+                    <header>
+                        <h2>Назначение автомобилей на маршрут</h2>
+                    </header>
+                    <p class="sm-mg-indent">После того, как маршруты созданы, необходимо перейти во вкладку «<b>Автомобили</b>» (<i class="sprite sprite-car-red"></i>) и для каждого автомобиля, в выпадающем окне выбираем необходимый маршрут.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="380" height="181" data-original="assets/images/section11/route11.png" class="img-responsive center-block" alt="Назначение автомобилей на маршрут">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">После этого каждый назначенный автомобиль отображается на карте тем же цветом, что и маршрут. Контур не даёт объекту слиться с цветом линии маршрута. Не выбранные транспортные средства отображаются на карте серым цветом.</p>
+                    <p class="sm-mg-indent">Сам объект на карте выглядит стрелкой, что позволяет определить, в каком направлении по маршруту он движется.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="378" height="205" data-original="assets/images/section11/route12.png" class="img-responsive center-block bordered" alt="Вид отрисованного маршрута на карте">
+                        </figure>
+                    </div>
+                </div>
+                <!--section11-2-->
+                <div class="inner_content" id="section11-3">
+                    <header>
+                        <h2>Хронометраж маршрута</h2>
+                    </header>
+                    <p class="sm-mg-indent">Хронометраж маршрута это – временные шаблоны созданных маршрутов.</p>
+                    <p class="sm-mg-indent">Для создания шаблона, необходимо перейти в раздел «<b>Маршруты</b>» (<i class="sprite sprite-road"></i>) выбирать вкладку «<b>Хронометраж</b>» и нажать кнопку «<b>Создать</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="379" height="210" data-original="assets/images/section11/route13.png" class="img-responsive center-block bordered" alt="Вид вкладки Маршруты и кнопки создания маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В появившемся окне нужно указать имя шаблона и выбрать маршрут. Автоматически в каждом из столбцов будут показаны все остановки маршрута согласно очерёдности их прохождения. Для любой или для всех остановок выставляются время прибытия и отправления.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="799" height="407" data-original="assets/images/section11/route14.png" class="img-responsive center-block" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <blockquote class="sm-mg-indent info">
+                        <h3>Примечание</h3>
+                        <ul>
+                            <li>Это хронометраж, потому время ставится не по времени суток, а с нуля. Показывается длительность поездки, а не время посещения остановок.</li>
+                            <li>Для междугороднего транспорта и разовых рейсов этот шаблон не нужен, но может использоваться.</li>
+                        </ul>
+                    </blockquote>
+                </div>
+                <!--section11-3-->
+                <div class="inner_content" id="section11-4">
+                    <header>
+                        <h2>Работа с графиком движения</h2>
+                    </header>
+                    <p class="sm-mg-indent">После того, как шаблоны хронометража созданы, переходим во вкладку «<b>Графики</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="380" height="152" data-original="assets/images/section11/route15.png" class="img-responsive center-block bordered" alt="Вид вкладки Маршруты">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">При создании или редактировании расписания открывается следующее окно:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="1000" height="408" data-original="assets/images/section11/route16.png" class="img-responsive center-block" alt="Окно создания рейса">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Здесь составляется график одного рейса. В верхней строке заполняем следующие данные:</p>
+                    <ul>
+                        <li>имя - обозначаем рейс;</li>
+                        <li>маршрут - выбираем маршрут, для которого будет действовать данный график;</li>
+                        <li>шаблон - если мы предварительно создали шаблон длительности для маршрута (хронометраж), можем выбрать его;</li>
+                        <li>отклонение - для того, чтоб быстрее увидеть значительные отклонения по времени задаём этот параметр, например, не будет считаться нарушением опоздание автобуса на две минуты;</li>
+                        <li>многоразовый - если график создаётся для единичного случая или редких, или длительных рейсов оставляем окно пустым, иначе он будет считаться ежедневным.</li>
+                    </ul>
+                    <p class="sm-mg-indent">После того, как мы выбрали маршрут, в колонках у нас будут автоматически проставлены закреплённые за ним остановки. Если речь идёт о разовом или длительном рейсе (окно «<b>многоразовый</b>» пустое), мы указываем даты прибытия и отправления. В случае с обычным городским транспортом это неважно и дата берётся любая.</p>
+                    <p class="sm-mg-indent">Далее указываем время прибытия и отправления для выбранных или всех остановок. Если заранее создан и выбран шаблон длительности данного маршрута (хронометраж), достаточно указать время первого отправления, а остальные будут проставлены автоматически. Эта функция позволяет создать график одного рейса за несколько секунд.</p>
+                </div>
+                <!--section11-4-->
+                <div class="inner_content" id="section11-5">
+                    <header>
+                        <h2>Отчёты по маршрутам</h2>
+                    </header>
+                    <h3 class="mg-indent">Отчёт по рейсам</h3>
+                    <p>Основная информация, необходимая в учете фирме перевозчику - количество рейсов, сделанных транспортным средством за определённый период. Для этих целей система предоставляет возможность создать отчет «<b>Рейсы по времени</b>». Для этого в разделе «<b>Маршруты</b>» (<i class="sprite sprite-road"></i>) нажимаем вкладку автомобили, выбираем необходимый объект и жмём кнопку «<b>Создать</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="396" height="165" data-original="assets/images/section11/route19.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В появившемся окне выбираем период и нажимаем «<b>Загрузить</b>».</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="271" height="85" data-original="assets/images/section11/route20.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Ожидаем загрузки отчета. По завершению отчет будет предложен в формате XLS.</p>
+                    <blockquote class="sm-mg-indent info">
+                        <h3>Подсказка</h3>
+                        <p>Отчеты рекомендуется загружать за один день, для удобной работы с материалами.</p>
+                    </blockquote>
+                    <p class="sm-mg-indent">Открывшийся отчет выглядит следующим образом:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="904" height="491" data-original="assets/images/section11/route21.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <h3 class="mg-indent">Отчёт «<b>Рейсы по остановкам с учетом графика</b>» </h3>
+                    <p class="sm-mg-indent">После того, как были созданы графики движения, диспетчер может загружать отчеты по выбранному транспорту и контролировать соответствие плановых посещений остановок и фактических. Для этого во вкладке «<b>Графики</b>» нажимаем кнопку отчет.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="396" height="165" data-original="assets/images/section11/route22.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">В появившемся окне выбираем анализируемое транспортное средство (должно быть привязано к конкретному маршруту предварительно). Выбираем дату и время, за которое будем изучать информацию.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="390" height="160" data-original="assets/images/section11/route17.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Выбираем графики движения (обычно, они известны заранее):</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="392" height="290" data-original="assets/images/section11/route23.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Не забудьте выставить зазор времени, в пределах которого транспортное средство может опоздать или прийти/выйти раньше на начальную и конечную остановку.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="392" height="161" data-original="assets/images/section11/route24.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <blockquote class="sm-mg-indent info">
+                        <h3>Примечание</h3>
+                        <p>«<b>Зазор</b>» даёт системе информацию в пределах какого времени ей нужно «<b>искать</b>» объект, что бы не путать один рейс с другим. Параметр «<b>Отклонение</b>» при создании графика рейсов только помогает отмечать расхождение во времени больше положенного. </p>
+                    </blockquote>
+                    <p class="sm-mg-indent">После жмём кнопку загрузить и ожидаем готовность отчета.</p>
+                    <p class="sm-mg-indent">Полученный отчет выглядит следующим образом:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="691" height="547" data-original="assets/images/section11/route25.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <h3 class="mg-indent">Отчет о нарушениях на маршруте</h3>
+                    <p class="sm-mg-indent">Отчет по нарушениям загружается при помощи кнопки «<b>Нарушения</b>» в том же окне, что и для отчетов по графикам движения. Поля для него заполняются таким же образом. Графики выбираются только, если необходим подсчет опережений и опозданий транспортного средства за период.</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="390" height="160" data-original="assets/images/section11/route17.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                    <p class="sm-mg-indent">Полученный таким образом отчёт будет иметь вид:</p>
+                    <div class="row sm-mg-indent">
+                        <figure>
+                            <img width="1202" height="544" data-original="assets/images/section11/route18.png" class="img-responsive center-block bordered" alt="Окно создания хронометража маршрута">
+                        </figure>
+                    </div>
+                </div>
+                <!--section11-5-->
+            </div>
+            <!--section11 Маршруты-->
+        </div>
+        <!--Main container-->
+    </div>
+    <!--container of all-->
+    <footer>
+        <div class="text-center">
+            <p>© 2016 <a href="http://gps-tracker.com.ua/">gps-tracker.com.ua</a>
+            
+            </p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lazyload.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!--<script src="assets/js/script.js"></script>-->
+</body>
+
+</html>
